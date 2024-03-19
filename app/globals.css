@@ -1,11 +1,44 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+/* @import "tailwindcss/base"; */
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 :root {
+  min-width: 459px; 
+ /*  transition: background-color 1.5s ease, color 1.5s ease; */ /* Lägg till övergångseffekter för bakgrundsfärg och textfärg, funkar inte? */
+
+}
+
+body {
+  font-size: 1rem;
+
+  /* transition: background-color 3.5s ease, color 1.5s ease; */ /* funkar inte? */
+
+}
+
+
+/* h2 {
+  font-size: 2.5rem;
+}
+ */
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+ 
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,3 +64,4 @@ body {
     text-wrap: balance;
   }
 }
+ */
