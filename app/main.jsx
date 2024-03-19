@@ -15,7 +15,15 @@ export default function ThemeState() {
     // with vanilla js.
     
     const rootEl = document.documentElement;
-    rootEl.classList.toggle('dark'); //
+    //rootEl.classList.toggle('dark'); //
+
+    if (state.userPreferences.theme === "light") {
+      rootEl.classList.add("dark");
+    } else if (state.userPreferences.theme === "dark") { 
+      rootEl.classList.remove("dark");
+    } else {
+      console.log("Unknown Theme for Dark/Light mode");
+    }
     
     //document.body.classList.add('dark');
    
