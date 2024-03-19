@@ -110,13 +110,11 @@ export default function Home() {
             ></Project>
           </div>
         </Section>
-        <Card>
-          <FontButton /> {/* // remove? */}
-        </Card>
-
         {/* <Card>
-        <h3>Project 1</h3>
-      </Card> */}
+          <FontButton />
+        </Card> */}
+
+       
       </main>
     </div>
   );
