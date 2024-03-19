@@ -11,10 +11,12 @@ export default function Project({title, description, projectLink, imgSrc}){
           <img className="w-auto h-[250px] md:h-[300px] lg:h-[450px] rounded-lg" src={imgSrc} alt="<preview img>" />
         </div>
 
-        <div className="flex h-full flex-col items-center lg:items-start text-center lg:text-start gap-4">
+        <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-start gap-4">
           <h3>{title}</h3>
 
-          <p className="text-[#7c7c7c]">{description}</p>
+          <div className="w-full">
+            <p className="text-[#7c7c7c]">{description}</p>
+          </div>
           <a href={projectLink} target="_blank">
             <ProjectAndContactButton title={"Project Link"}></ProjectAndContactButton>
           </a>

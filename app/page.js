@@ -52,24 +52,53 @@ export default function Home() {
           bgcolor={"[#f7f8fc]"}
           darkbgcolor={"[#23272F]"}
         >
-          <div className="flex flex-col items-start text-start gap-6">
-            <h4>Get to know me!</h4>
-            <div className="sm:w-[70%] md:w-[60%]">
-              <p className="">
-                I am in the final stages of studying Frontend Developing in
-                mobile & web-applications at Chas Academy (university) in
-                Stockholm. We have worked with everything from CSS and HTML to
-                JavaScript, React, Nextjs, ...fillinblank... Prior to my coding
-                journey I have taken a <u>Masters in Economics</u> at Stockholm
-                University, and I have taken university-courses in different
-                coding languages (e.g. C++, Java, Kotlin, etc.){" "}
-              </p>
+          <div className="w-full flex flex-col justify-evenly lg:flex-row gap-6">
+            {/* lg:w-[50%] and justify-evenly is a temporary solution... surely another way to fix this?  */}
+            <div className="lg:w-[50%] flex flex-col gap-6 items-start text-start">
+              <h4>Get to know me!</h4>
+              <div className="sm:w-[70%] md:w-[60%] lg:w-[95%]">
+                <p className="">
+                  I am in the final stages of studying Frontend Developing in
+                  mobile & web-applications at Chas Academy (university) in
+                  Stockholm. We have worked with everything from CSS and HTML to
+                  JavaScript, React, Nextjs, ...fillinblank... Prior to my
+                  coding journey I have taken a <u>Masters in Economics</u> at
+                  Stockholm University, and I have taken university-courses in
+                  different coding languages (e.g. C++, Java, Kotlin, etc.){" "}
+                </p>
+              </div>
+              {/*  <a href="#projects"> */}
+              <ProjectAndContactButton
+                title={"CONTACT"}
+              ></ProjectAndContactButton>
+              {/*  </a> */}
             </div>
-            {/*  <a href="#projects"> */}
-            <ProjectAndContactButton
-              title={"CONTACT"}
-            ></ProjectAndContactButton>
-            {/*  </a> */}
+            <div className="flex flex-col gap-6 items-start text-start">
+              <h4>My Skills</h4>
+              {/* fix in small screen so skill-divs fit */}
+              <div className="grid grid-cols-6 gap-4">
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
+                
+       
+              </div>
+            </div>
           </div>
         </Section>
 
@@ -101,9 +130,7 @@ export default function Home() {
             <Project
               title={"Replicated Nordea's website"}
               description={
-                
-                  "Simple HTML & CSS project I made during one of the first workshops at Chas Academy. Tried replicating Nordea's feedback page https://www.nordea.se/privat/kundservice/synpunkter-och-forslag.html"               
-               
+                "Simple HTML & CSS project I made during one of the first workshops at Chas Academy. Tried replicating Nordea's feedback page"
               }
               projectLink={"https://workshop-4-form.vercel.app"}
               imgSrc={"/NordeaPagePreview.png"}
@@ -113,8 +140,6 @@ export default function Home() {
         {/* <Card>
           <FontButton />
         </Card> */}
-
-       
       </main>
     </div>
   );
