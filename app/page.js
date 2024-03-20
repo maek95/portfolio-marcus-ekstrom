@@ -67,8 +67,8 @@ export default function Home() {
                   mobile & web-applications at Chas Academy (university) in
                   Stockholm. We have worked with everything from CSS and HTML to
                   JavaScript, React, Nextjs, ...fillinblank... Prior to my
-                  coding journey I have taken a <u>Masters in Economics</u> at
-                  Stockholm University, and I have taken university-courses in
+                  coding journey I took a <u>Masters in Economics</u> at
+                  Stockholm University, and I also took some university-courses in
                   different coding languages (e.g. C++, Java, Kotlin, etc.){" "}
                 </p>
               </div>
