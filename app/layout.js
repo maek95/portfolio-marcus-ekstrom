@@ -14,9 +14,9 @@ export const metadata = {
 
  
 export const viewport = {
-  width: 'device-width',
-  initialScale: 0.5,
-  userScalable: false,
+  /* width: 'device-width',
+  initialScale: 1.0,
+  userScalable: false, */
   // Also supported by less commonly used
   // interactiveWidget: 'resizes-visual',
 }
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ThemeProvider>
-        {/* <PreventZoom></PreventZoom> */}
+        <PreventZoom></PreventZoom>
         <ThemeState></ThemeState> {/* see main.jsx, adds or removes the 'dark' mode with tailwind */}
         <body className="font-sourceSans">{children}</body>
       </ThemeProvider>
