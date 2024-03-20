@@ -9,7 +9,7 @@
 }
 
 :root {
-  min-width: 459px; 
+  /* min-width: 459px;  */
  /*  transition: background-color 1.5s ease, color 1.5s ease; */ /* Lägg till övergångseffekter för bakgrundsfärg och textfärg, funkar inte? */
 
 }
