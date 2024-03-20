@@ -8,6 +8,7 @@ import Section from "../components/Section";
 import ProjectAndContactButton from "@/components/ProjectAndContactButton";
 import { useRef } from "react";
 import Project from "@/components/Project";
+import SkillsGrid from "@/components/SkillsGrid";
 
 /* 
 const inter = Inter({ subsets: ["latin"] }); */
@@ -80,28 +81,7 @@ export default function Home() {
             <div className="flex flex-col gap-6 items-start text-start">
               <h4>My Skills</h4>
               {/* fix in small screen so skill-divs fit */}
-              <div className="grid grid-cols-6 gap-4">
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                <div className="bg-[#EEEFF2] p-4 flex justify-center text-center">CSS</div>
-                
-       
-              </div>
+              <SkillsGrid></SkillsGrid>
             </div>
           </div>
         </Section>
