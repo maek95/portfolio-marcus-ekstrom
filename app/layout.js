@@ -1,6 +1,7 @@
 import "./globals.css";
 import { ThemeProvider } from "@/ThemeContext";
 import ThemeState from "./main";
+import PreventZoom from "./preventZoom";
 
 
 export const metadata = {
@@ -17,9 +18,12 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
+
+
   return (
     <html lang="en">
       <ThemeProvider>
+        <PreventZoom></PreventZoom>
         <ThemeState></ThemeState> {/* see main.jsx, adds or removes the 'dark' mode with tailwind */}
         <body className="font-sourceSans">{children}</body>
       </ThemeProvider>

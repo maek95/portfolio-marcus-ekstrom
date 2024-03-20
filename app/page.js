@@ -17,6 +17,10 @@ export default function Home() {
   const aboutMeSectionRef = useRef(null);
   const heroSectionRef = useRef(null);
 
+/*   document.addEventListener('touchmove', function (event) {
+    if (event.scale !== 1) { event.preventDefault(); }
+  }, false); */
+
   function scrollToSection(sectionRef) {
     const yOffset = -80; // Adjust this value to change the offset
     const element = sectionRef.current;
