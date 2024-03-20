@@ -11,8 +11,6 @@ export default function ThemeState() {
   console.log(state.userPreferences.theme);
 
   useEffect(() => {
-    // Your code here. Add the dark class to the <html /> tag
-    // with vanilla js.
     
     const rootEl = document.documentElement;
     //rootEl.classList.toggle('dark'); //
