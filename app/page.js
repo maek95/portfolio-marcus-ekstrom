@@ -59,9 +59,9 @@ export default function Home() {
         >
           <div className="w-full flex flex-col justify-evenly lg:flex-row gap-6">
             {/* lg:w-[50%] and justify-evenly is a temporary solution... surely another way to fix this?  */}
-            <div className="lg:w-[50%] flex flex-col gap-6 items-start text-start">
+            <div className="w-[90%] lg:w-full flex flex-col gap-6 items-start text-start">
               <h4>Get to know me!</h4>
-              <div className="sm:w-[80%] lg:w-[95%]">
+              <div className="">
                 <p className="text-[#7c7c7c] dark:text-[#868e9d]">
                   I am in the final stages of studying Frontend Developing in
                   mobile & web-applications at Chas Academy (university) in
@@ -78,7 +78,7 @@ export default function Home() {
               ></ProjectAndContactButton>
               {/*  </a> */}
             </div>
-            <div className="flex flex-col gap-6 items-start text-start">
+            <div className="w-[90%] lg:w-full flex flex-col gap-6 items-start text-start">
               <h4>My Skills</h4>
               <p className="text-[#7c7c7c] dark:text-[#868e9d]">Check my CV for a description of my <u>Masters in Economics</u> I took in 2022!</p>
               {/* fix in small screen so skill-divs fit */}
