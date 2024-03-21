@@ -8,7 +8,7 @@ import Section from "../components/Section";
 import ProjectAndContactButton from "@/components/ProjectAndContactButton";
 import { useRef } from "react";
 import Project from "@/components/Project";
-import SkillsGrid from "@/components/SkillsGrid";
+import Skills from "@/components/Skills";
 
 /* 
 const inter = Inter({ subsets: ["latin"] }); */
@@ -61,12 +61,12 @@ export default function Home() {
             {/* lg:w-[50%] and justify-evenly is a temporary solution... surely another way to fix this?  */}
             <div className="lg:w-[50%] flex flex-col gap-6 items-start text-start">
               <h4>Get to know me!</h4>
-              <div className="sm:w-[70%] md:w-[60%] lg:w-[95%]">
-                <p className="">
+              <div className="sm:w-[80%] lg:w-[95%]">
+                <p className="text-[#7c7c7c] dark:text-[#868e9d]">
                   I am in the final stages of studying Frontend Developing in
                   mobile & web-applications at Chas Academy (university) in
-                  Stockholm. We have worked with everything from CSS and HTML to
-                  JavaScript, React, Nextjs, ...fillinblank... Prior to my
+                  Stockholm. We have worked with everything from CSS & HTML to
+                  JavaScript, React, Nextjs, ...fillinblank... It should also be noted that we have worked with backend as well, even though the program is focused on Frontend! Prior to my
                   coding journey I took a <u>Masters in Economics</u> at
                   Stockholm University, and I also took some university-courses in
                   different coding languages (e.g. C++, Java, Kotlin, etc.){" "}
@@ -80,8 +80,9 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-6 items-start text-start">
               <h4>My Skills</h4>
+              <p className="text-[#7c7c7c] dark:text-[#868e9d]">Check my CV for a description of my <u>Masters in Economics</u> I took in 2022!</p>
               {/* fix in small screen so skill-divs fit */}
-              <SkillsGrid></SkillsGrid>
+              <Skills></Skills>
             </div>
           </div>
         </Section>
@@ -97,24 +98,26 @@ export default function Home() {
             <Project
               title={"Quiz App"}
               description={
-                "This project was in the final stages of my studies at Chas Academy"
+                "This was a group project we did at Chas Academy where we mainly learned how to work as a group with GitHub (fetching/pushing changes), and how to handle state through useState, global state (Redux store), and localStorage."
               }
               projectLink={"https://23-chas-quiz.vercel.app"}
+              imgSrc={"/myQuizAppPreview.png"}
             ></Project>
 
             <Project
               title={"Figma App"}
-              description={
-                "At Chas Academy we had a 1-week segment about Figma and I made a simple App!"
+              description={ 
+                "At Chas Academy we had a 1-week segment about Figma and I made a simple App! It gave me some insight on how Designers may work with Figma, or if I myself want to brainstorm design ideas for a new project."
               }
               projectLink={
                 "https://www.figma.com/proto/7EXISjrUDnc5rQEhkxgSAX/my-Health-app?node-id=19-297&starting-point-node-id=19%3A297&mode=design&t=JFTobLpRmywpSry4-1"
               }
+              imgSrc={"myFigmaAppPreview.png"}
             ></Project>
             <Project
               title={"Replicated Nordea's website"}
-              description={
-                "Simple HTML & CSS project I made during one of the first workshops at Chas Academy. Tried replicating Nordea's feedback page"
+              description={ // hydration issue if using HTML elements when sending props? e.g.  <a href="nordealink...">Nordea<a>
+                "Simple HTML & CSS project I made during one of the first workshops at Chas Academy, learning about forms and submit buttons. I tried replicating Nordea's feedback page."
               }
               projectLink={"https://workshop-4-form.vercel.app"}
               imgSrc={"/NordeaPagePreview.png"}
