@@ -5,7 +5,7 @@ import FontButton from "../components/FontButton";
 import Card from "../components/Card";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
-import ProjectandContactButton from "@/components/ProjectandContactButton";
+/* import ProjectandContactButton from "@/components/ProjectandContactButton"; */
 import BlueButton from "@/components/BlueButton";
 import { useRef, useState } from "react";
 import Project from "@/components/Project";

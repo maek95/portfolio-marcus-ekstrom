@@ -1,4 +1,4 @@
-import ProjectandContactButton from "@/components/ProjectandContactButton";
+/* import ProjectandContactButton from "@/components/ProjectandContactButton"; */
 import BlueButton from "./BlueButton";
 
 export default function Hero({scrollToProjectSection, scrollToAboutSection}) {
