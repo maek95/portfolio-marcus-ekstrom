@@ -16,7 +16,7 @@ export default function Project({title, description, projectLink, imgSrc}){
           <h3>{title}</h3>
 
           <div className="w-full">
-            <p className="text-[#7c7c7c] dark:text-[#868e9d]">{description}</p>
+            <p className="text-[#7c7c7c] dark:text-[#959eae]">{description}</p>
           </div>
           <a href={projectLink} target="_blank">
             <ProjectAndContactButton title={"Project Link"}></ProjectAndContactButton>

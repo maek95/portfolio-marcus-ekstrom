@@ -62,14 +62,14 @@ export default function Home() {
             <div className="w-[90%] lg:w-full flex flex-col gap-6 items-start text-start">
               <h4>Get to know me!</h4>
               <div className="">
-                <p className="text-[#7c7c7c] dark:text-[#868e9d]">
-                  I am in the final stages of studying Frontend Developing in
-                  mobile & web-applications at Chas Academy (university) in
+                <p className="text-[#7c7c7c] dark:text-[#959eae]">
+                  I am in the final stages of studying <strong>Frontend Developing for
+                  mobile & web</strong> at Chas Academy (university) in
                   Stockholm. We have worked with everything from CSS & HTML to
-                  JavaScript, React, Nextjs, ...fillinblank... It should also be noted that we have worked with backend as well, even though the program is focused on Frontend! Prior to my
-                  coding journey I took a <u>Masters in Economics</u> at
+                  JavaScript, React, Nextjs, ...fillinblank... We have also worked with backend, such as ...fillinblank... Prior to my
+                  coding journey I took a <strong>Masters in Economics</strong> at
                   Stockholm University, and I also took some university-courses in
-                  different coding languages (e.g. C++, Java, Kotlin, etc.){" "}
+                  different coding languages (C++, Java and Kotlin){" "}
                 </p>
               </div>
               {/*  <a href="#projects"> */}
@@ -80,8 +80,7 @@ export default function Home() {
             </div>
             <div className="w-[90%] lg:w-full flex flex-col gap-6 items-start text-start">
               <h4>My Skills</h4>
-              <p className="text-[#7c7c7c] dark:text-[#868e9d]">Check my CV for a description of my <u>Masters in Economics</u> I took in 2022!</p>
-              {/* fix in small screen so skill-divs fit */}
+              {/* <p className="text-[#7c7c7c] dark:text-[#959eae]">Check my CV for a description of my <strong>Masters in Economics</strong> I took in 2022!</p> */}
               <Skills></Skills>
             </div>
           </div>

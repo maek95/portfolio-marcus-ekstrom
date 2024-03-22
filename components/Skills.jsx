@@ -1,7 +1,13 @@
 function Skill({skillName}) {
 
+  /* text-[#23272F] */
+
+ /*  dark:bg-[#868e9d] */
+ 
+ /* dark:text-[#23272F] */
+ 
   return (
-    <div className="bg-[#EEEFF2] rounded-lg dark:bg-[#868e9d] p-4 flex justify-center text-center text-[#23272F]">
+    <div className="bg-[#EEEFF2] rounded-lg dark:bg-[#1A1C21] p-4 flex justify-center text-center text-[#7c7c7c] dark:text-[#959eae] ">
     {/* <div className="bg-[#EEEFF2] rounded-lg dark:bg-white p-4 flex justify-center text-center text-[#23272F]"> */}
         {skillName}
     </div>
