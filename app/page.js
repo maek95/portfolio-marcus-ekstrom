@@ -6,6 +6,7 @@ import Card from "../components/Card";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
 import ProjectandContactButton from "@/components/ProjectandContactButton";
+import BlueButton from "@/components/BlueButton";
 import { useRef, useState } from "react";
 import Project from "@/components/Project";
 import Skills from "@/components/Skills";
@@ -86,9 +87,9 @@ export default function Home() {
                 </p>
               </div>
               {/*  <a href="#projects"> */}
-              <ProjectandContactButton
+              <BlueButton
                 title={"CONTACT"}
-              ></ProjectandContactButton>
+              ></BlueButton>
               {/*  </a> */}
             </div>
             <div className="sm:w-[90%] md:w-[80%] lg:w-full flex flex-col gap-6 items-start text-start">

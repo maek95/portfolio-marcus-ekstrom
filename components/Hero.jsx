@@ -1,4 +1,5 @@
 import ProjectandContactButton from "@/components/ProjectandContactButton";
+import BlueButton from "./BlueButton";
 
 export default function Hero({scrollToProjectSection, scrollToAboutSection}) {
 
@@ -11,7 +12,7 @@ export default function Hero({scrollToProjectSection, scrollToAboutSection}) {
         <p>Fullstack developer student</p>
 
         <div>
-          <ProjectandContactButton onClick={scrollToProjectSection} title={"PROJECTS"}></ProjectandContactButton>
+          <BlueButton onClick={scrollToProjectSection} title={"PROJECTS"}></BlueButton>
           {/* <ProjectandContactButton onClick={scrollToAboutSection} title={"ABOUT ME"}></ProjectandContactButton> */}
         </div>
       </div>
