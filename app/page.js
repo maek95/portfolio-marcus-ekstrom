@@ -101,8 +101,8 @@ export default function Home() {
               projectLink={"https://23-chas-quiz.vercel.app"}
               imgSrc={"/myQuizAppPreview.png"}
             >
-              This was a group project we did at Chas Academy where we mainly
-              learned how to work as a group with GitHub, and how to handle
+              Fun and engaging group project at Chas Academy where we mainly
+              learned how to work as a group in GitHub and solving merge conflicts. We also refined our skills in handling
               state through useState, global state (Redux store), and
               localStorage.
             </Project>
