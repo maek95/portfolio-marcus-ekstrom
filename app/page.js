@@ -19,7 +19,7 @@ export default function Home() {
   const aboutMeSectionRef = useRef(null);
   const heroSectionRef = useRef(null);
 
-/*   document.addEventListener('touchmove', function (event) {
+  /*   document.addEventListener('touchmove', function (event) {
     if (event.scale !== 1) { event.preventDefault(); }
   }, false); */
 
@@ -64,12 +64,14 @@ export default function Home() {
               <h4>Get to know me!</h4>
               <div className="">
                 <p className="text-[#7c7c7c] dark:text-[#959eae]">
-                  I am in the final stages of studying <strong>Frontend Developing for
-                  mobile & web</strong> at Chas Academy (university) in
-                  Stockholm. We have worked with everything from CSS & HTML to
-                  JavaScript, React, Nextjs, ...fillinblank... The university also included 3 months of backend in order for us to get a broader perspective of the developing process, and pursue <strong>Fullstack roles</strong>. Before my coding journey began I took a <strong>Masters in Economics</strong> at
-                  Stockholm University, where my Master Thesis involved analyzing large datasets using Vector Autoregression (VAR) and MATLAB. After that I also took individual university-courses in
-                  C++, Java, and Kotlin.{" "}
+                  I live in Stockholm and I am currently studying <strong>Fullstack development</strong> with focus on Frontend. In Frontend I have done projects in everything
+                  from CSS & HTML to JavaScript, React, Nextjs,
+                  ...fillinblank... In backend I have done projects in ...fillinblank... .Before my coding journey
+                  began I took a <strong>Masters in Economics</strong> at
+                  Stockholm University, where my Master Thesis involved
+                  analyzing large datasets using Vector Autoregression (VAR) and
+                  MATLAB. After that I also took individual university-courses
+                  in C++, Java, and Kotlin.{" "}
                 </p>
               </div>
               {/*  <a href="#projects"> */}
@@ -99,7 +101,10 @@ export default function Home() {
               projectLink={"https://23-chas-quiz.vercel.app"}
               imgSrc={"/myQuizAppPreview.png"}
             >
-              This was a group project we did at Chas Academy where we mainly learned how to work as a group with GitHub, and how to handle state through useState, global state (Redux store), and localStorage.
+              This was a group project we did at Chas Academy where we mainly
+              learned how to work as a group with GitHub, and how to handle
+              state through useState, global state (Redux store), and
+              localStorage.
             </Project>
 
             <Project
@@ -109,14 +114,29 @@ export default function Home() {
               }
               imgSrc={"myFigmaAppPreview.png"}
             >
-              At Chas Academy we had a 1-week segment about Figma and I made a simple App! It gave me some insight on how Designers may work with Figma, or if I myself want to brainstorm design ideas for a new project.
+              At Chas Academy we had a 1-week segment about Figma and I made a
+              simple App! It gave me some insight on how Designers may work with
+              Figma, or if I myself want to brainstorm design ideas for a new
+              project.
             </Project>
             <Project
               title={"Replicated Nordea's website"}
               projectLink={"https://workshop-4-form.vercel.app"}
               imgSrc={"/NordeaPagePreview.png"}
             >
-              Simple HTML & CSS project I made during one of the first workshops at Chas Academy, learning about forms and submit buttons. I tried replicating <Link className="text-[#7c7c7c] dark:text-[#959eae]" href={"https://www.nordea.se/privat/kundservice/synpunkter-och-forslag.html"} target="_blank">Nordea's feedback page</Link>.
+              Simple HTML & CSS project I made during one of the first workshops
+              at Chas Academy, learning about forms and submit buttons. I tried
+              replicating{" "}
+              <Link
+                className="text-[#7c7c7c] dark:text-[#959eae]"
+                href={
+                  "https://www.nordea.se/privat/kundservice/synpunkter-och-forslag.html"
+                }
+                target="_blank"
+              >
+                Nordea's feedback page
+              </Link>
+              .
             </Project>
           </div>
         </Section>
