@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Card from "./Card";
-import ProjectandContactButton from "./ProjectandContactButton";
+/* import ProjectandContactButton from "./ProjectandContactButton"; */
 import Image from "next/image";
+import BlueButton from "./BlueButton";
 
 export default function Project({
   title,
@@ -79,9 +80,9 @@ export default function Project({
               <p className="">{children}</p>
             </div>
             <Link href={projectLink} target="_blank">
-              <ProjectandContactButton
+              <BlueButton
                 title={"Project Link"}
-              ></ProjectandContactButton>
+              ></BlueButton>
             </Link>
           </div>
         </div>
