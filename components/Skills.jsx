@@ -35,6 +35,7 @@ export default function Skills() {
       <Skill skillName={"Git"}></Skill>
       <Skill skillName={"GitHub"}></Skill>
       <Skill skillName={"Terminal"}></Skill>   
+      <Skill skillName={"Regression Analysis"}></Skill>   
     </div>
     <div className="flex flex-col gap-4">
     <h4>Basic Knowledge</h4>
