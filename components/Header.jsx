@@ -1,7 +1,7 @@
 
 export default function Header({ children, onClickHome, onClickAbout, onClickProjects }) {
   return (
-    <header className="sticky h-20 top-0 left-0 right-0 px-4 flex justify-between bg-white dark:bg-[#23272F] opacity-[98%]">
+    <header className="z-50 sticky h-20 top-0 left-0 right-0 px-4 flex justify-between bg-white dark:bg-[#23272F] opacity-[98%]">
       <div className="flex flex-row items-center justify-center gap-4">
         {/*profile picture + name */}
         <div className="flex">
