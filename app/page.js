@@ -9,6 +9,7 @@ import ProjectAndContactButton from "@/components/ProjectAndContactButton";
 import { useRef } from "react";
 import Project from "@/components/Project";
 import Skills from "@/components/Skills";
+import Link from "next/link";
 
 /* 
 const inter = Inter({ subsets: ["latin"] }); */
@@ -59,17 +60,16 @@ export default function Home() {
         >
           <div className="w-full flex flex-col justify-evenly lg:flex-row gap-6">
             {/* lg:w-[50%] and justify-evenly is a temporary solution... surely another way to fix this?  */}
-            <div className="w-[90%] lg:w-full flex flex-col gap-6 items-start text-start">
+            <div className="sm:w-[90%] md:w-[80%] lg:w-full flex flex-col gap-6 items-start text-start">
               <h4>Get to know me!</h4>
               <div className="">
                 <p className="text-[#7c7c7c] dark:text-[#959eae]">
                   I am in the final stages of studying <strong>Frontend Developing for
                   mobile & web</strong> at Chas Academy (university) in
                   Stockholm. We have worked with everything from CSS & HTML to
-                  JavaScript, React, Nextjs, ...fillinblank... We have also worked with backend, such as ...fillinblank... Prior to my
-                  coding journey I took a <strong>Masters in Economics</strong> at
-                  Stockholm University, and I also took some university-courses in
-                  different coding languages (C++, Java and Kotlin){" "}
+                  JavaScript, React, Nextjs, ...fillinblank... The university also included 3 months of backend in order for us to get a broader perspective of the developing process, and pursue <strong>Fullstack roles</strong>. Before my coding journey began I took a <strong>Masters in Economics</strong> at
+                  Stockholm University, where my Master Thesis involved analyzing large datasets using Vector Autoregression (VAR) and MATLAB. After that I also took individual university-courses in
+                  C++, Java, and Kotlin.{" "}
                 </p>
               </div>
               {/*  <a href="#projects"> */}
@@ -78,7 +78,7 @@ export default function Home() {
               ></ProjectAndContactButton>
               {/*  </a> */}
             </div>
-            <div className="w-[90%] lg:w-full flex flex-col gap-6 items-start text-start">
+            <div className="sm:w-[90%] md:w-[80%] lg:w-full flex flex-col gap-6 items-start text-start">
               <h4>My Skills</h4>
               {/* <p className="text-[#7c7c7c] dark:text-[#959eae]">Check my CV for a description of my <strong>Masters in Economics</strong> I took in 2022!</p> */}
               <Skills></Skills>
@@ -96,31 +96,28 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-5">
             <Project
               title={"Quiz App"}
-              description={
-                "This was a group project we did at Chas Academy where we mainly learned how to work as a group with GitHub (fetching/pushing changes), and how to handle state through useState, global state (Redux store), and localStorage."
-              }
               projectLink={"https://23-chas-quiz.vercel.app"}
               imgSrc={"/myQuizAppPreview.png"}
-            ></Project>
+            >
+              This was a group project we did at Chas Academy where we mainly learned how to work as a group with GitHub, and how to handle state through useState, global state (Redux store), and localStorage.
+            </Project>
 
             <Project
               title={"Figma App"}
-              description={ 
-                "At Chas Academy we had a 1-week segment about Figma and I made a simple App! It gave me some insight on how Designers may work with Figma, or if I myself want to brainstorm design ideas for a new project."
-              }
               projectLink={
                 "https://www.figma.com/proto/7EXISjrUDnc5rQEhkxgSAX/my-Health-app?node-id=19-297&starting-point-node-id=19%3A297&mode=design&t=JFTobLpRmywpSry4-1"
               }
               imgSrc={"myFigmaAppPreview.png"}
-            ></Project>
+            >
+              At Chas Academy we had a 1-week segment about Figma and I made a simple App! It gave me some insight on how Designers may work with Figma, or if I myself want to brainstorm design ideas for a new project.
+            </Project>
             <Project
               title={"Replicated Nordea's website"}
-              description={ // hydration issue if using HTML elements when sending props? e.g.  <a href="nordealink...">Nordea<a>
-                "Simple HTML & CSS project I made during one of the first workshops at Chas Academy, learning about forms and submit buttons. I tried replicating Nordea's feedback page."
-              }
               projectLink={"https://workshop-4-form.vercel.app"}
               imgSrc={"/NordeaPagePreview.png"}
-            ></Project>
+            >
+              Simple HTML & CSS project I made during one of the first workshops at Chas Academy, learning about forms and submit buttons. I tried replicating <Link className="text-[#7c7c7c] dark:text-[#959eae]" href={"https://www.nordea.se/privat/kundservice/synpunkter-och-forslag.html"} target="_blank">Nordea's feedback page</Link>.
+            </Project>
           </div>
         </Section>
         {/* <Card>

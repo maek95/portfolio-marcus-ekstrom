@@ -1,9 +1,10 @@
 import Card from "./Card"
 import ProjectAndContactButton from "./ProjectAndContactButton"
 
-export default function Project({title, description, projectLink, imgSrc}){
+export default function Project({title, description, projectLink, imgSrc, children}){
 
   return (
+    <>
     <Card>
       <div className="min-w-full flex flex-col lg:flex-row items-center gap-8">
         <div className="flex w-full justify-center">
@@ -16,7 +17,8 @@ export default function Project({title, description, projectLink, imgSrc}){
           <h3>{title}</h3>
 
           <div className="w-full">
-            <p className="text-[#7c7c7c] dark:text-[#959eae]">{description}</p>
+            <p className="text-[#7c7c7c] dark:text-[#959eae]">
+             {children}</p>
           </div>
           <a href={projectLink} target="_blank">
             <ProjectAndContactButton title={"Project Link"}></ProjectAndContactButton>
@@ -24,5 +26,6 @@ export default function Project({title, description, projectLink, imgSrc}){
         </div>
       </div>
     </Card>
+    </>
   )
 }
