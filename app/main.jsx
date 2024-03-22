@@ -7,7 +7,6 @@ export default function ThemeState() {
   const { state } = useTheme();
   /* const dispatch = useThemeDispatch(); */
 
-  console.log(state);
   console.log(state.userPreferences.theme);
 
   useEffect(() => {
@@ -15,9 +14,9 @@ export default function ThemeState() {
     const rootEl = document.documentElement;
     //rootEl.classList.toggle('dark'); //
 
-    if (state.userPreferences.theme === "light") {
+    if (state.userPreferences.theme === "dark") {
       rootEl.classList.add("dark");
-    } else if (state.userPreferences.theme === "dark") { 
+    } else if (state.userPreferences.theme === "light") { 
       rootEl.classList.remove("dark");
     } else {
       console.log("Unknown Theme for Dark/Light mode");
@@ -27,5 +26,5 @@ export default function ThemeState() {
    
   }, [state.userPreferences.theme]); // toggle theme med en knapp, då togglas 'dark' ovanför!
 
-  // dont have to return anything?
+  return null; // void, dont return anything
 }

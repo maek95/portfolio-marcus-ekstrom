@@ -1,7 +1,17 @@
+"use client"
+/* npm install hamburger-react
+https://www.npmjs.com/package/hamburger-react
+ */
+import Hamburger from "hamburger-react";
+import { useState } from "react";
 
-export default function Header({ children, onClickHome, onClickAbout, onClickProjects }) {
+export default function Header({ children, onClickHome, onClickAbout, onClickProjects, isHamburgerClicked, setIsHamburgerClicked }) {
+
+  console.log(isHamburgerClicked);
+
+  // TODO: fix hamburger-menu!
   return (
-    <header className="z-50 sticky h-20 top-0 left-0 right-0 px-4 flex justify-between bg-white dark:bg-[#23272F] opacity-[98%]">
+    <header className="text-black dark:text-white z-40 sticky h-20 top-0 left-0 right-0 px-4 flex justify-between bg-white dark:bg-[#23272F] opacity-[98%]">
       <div className="flex flex-row items-center justify-center gap-4">
         {/*profile picture + name */}
         <div className="flex">
@@ -40,7 +50,12 @@ export default function Header({ children, onClickHome, onClickAbout, onClickPro
           alt="hamburger menu"
         /> */}
          <div className="flex items-center">
-          <svg
+          {}
+          {/* https://hamburger-react.netlify.app for props guide */}
+          <div className="flex sm:hidden">
+            <Hamburger toggled={isHamburgerClicked} toggle={setIsHamburgerClicked}></Hamburger>
+          </div>
+          {/* <svg
           height="32px"
           id="Layer_1"
           style={{ enableBackground: 'new 0 0 32 32' }}
@@ -53,17 +68,20 @@ export default function Header({ children, onClickHome, onClickAbout, onClickPro
           className="dark:fill-white flex sm:hidden" 
         >
           <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
-          </svg>
+          </svg> */}
         </div>
-        <ul className=" hidden sm:flex flex-row sm:gap-3 items-center justify-center font-semibold">
-          <li onClick={onClickHome} className="list-none cursor-pointer">Home</li>
-          <li onClick={onClickAbout} className="list-none cursor-pointer">About</li>
-          <li onClick={onClickProjects} className="list-none cursor-pointer">Projects</li>
-          <li className="list-none">Contact</li>
+        <ul className="hidden sm:flex flex-row items-center justify-center font-semibold">
+          <li onClick={onClickHome} className="list-none cursor-pointer hover:text-[#347FC1] hover:underline px-4 py-4">Home</li>
+          <li onClick={onClickAbout} className="list-none cursor-pointer hover:text-[#347FC1] hover:underline pr-4 py-4">About</li>
+          <li onClick={onClickProjects} className="list-none cursor-pointer hover:text-[#347FC1] hover:underline pr-4 py-4">Projects</li>
+          <li className="list-none cursor-pointer hover:text-[#347FC1] hover:underline pr-4 py-4">Contact</li>
           <li className="hidden sm:flex items-center justify-center">{children}</li> {/* // ThemeButton.jsx */}
         </ul>
         <li className="flex sm:hidden items-center justify-center">{children}</li> {/* // ThemeButton.jsx */}
+
+        
       </div>
     </header>
   );
 }
+

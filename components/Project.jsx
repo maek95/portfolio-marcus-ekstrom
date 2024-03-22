@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Card from "./Card";
-import ProjectAndContactButton from "./ProjectAndContactButton";
+import ProjectandContactButton from "./ProjectandContactButton";
 import Image from "next/image";
 
 export default function Project({
@@ -73,15 +73,15 @@ export default function Project({
           </div>
 
           <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-start gap-4">
-            <h3>{title}</h3>
+            <h3 className="text-black dark:text-white ">{title}</h3>
 
             <div className="w-full">
-              <p className="text-[#7c7c7c] dark:text-[#959eae]">{children}</p>
+              <p className="">{children}</p>
             </div>
             <Link href={projectLink} target="_blank">
-              <ProjectAndContactButton
+              <ProjectandContactButton
                 title={"Project Link"}
-              ></ProjectAndContactButton>
+              ></ProjectandContactButton>
             </Link>
           </div>
         </div>

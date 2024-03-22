@@ -5,35 +5,41 @@ import FontButton from "../components/FontButton";
 import Card from "../components/Card";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
-import ProjectAndContactButton from "@/components/ProjectAndContactButton";
-import { useRef } from "react";
+import ProjectandContactButton from "@/components/ProjectandContactButton";
+import { useRef, useState } from "react";
 import Project from "@/components/Project";
 import Skills from "@/components/Skills";
 import Link from "next/link";
+import ScrollToTop from "@/components/ScrollToTopButton";
+import HeaderExpanded from "@/components/HeaderExpanded";
 
-/* 
-const inter = Inter({ subsets: ["latin"] }); */
+
 
 export default function Home() {
+
   const projectsSectionRef = useRef(null);
   const aboutMeSectionRef = useRef(null);
   const heroSectionRef = useRef(null);
+  const [isHamburgerClicked, setIsHamburgerClicked] = useState(false)
 
-  /*   document.addEventListener('touchmove', function (event) {
-    if (event.scale !== 1) { event.preventDefault(); }
-  }, false); */
+
+  // TODO: @media transform duration on projectpreview images resizing? transform transition height & width?
+  // TODO: CONTACT ME SECTION, and link contact buttons / nav buttons!
+  // TODO: useContext for onClickHome onClickAbout onClickProjects? just look at ThemeContext and do same thing kinda?
+  // TODO: remove color transition duration on hamburger button when we swap dark/light mode? since nothing else does that
+  // TODO: fade in/out display hidden / flex HeaderExpanded?
 
   function scrollToSection(sectionRef) {
     const yOffset = -80; // Adjust this value to change the offset
     const element = sectionRef.current;
-    const y =
-      element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
     window.scrollTo({ top: y, behavior: "smooth" });
   }
 
   return (
-    <div className="text-black dark:text-white bg-[#EEEFF2] dark:bg-[#1A1C21] min-h-screen">
-      <Header
+    <div className="text-[#7c7c7c] dark:text-[#959eae] bg-[#EEEFF2] dark:bg-[#1A1C21] min-h-screen">
+      <ScrollToTop></ScrollToTop>
+      <Header setIsHamburgerClicked={setIsHamburgerClicked} isHamburgerClicked={isHamburgerClicked}
         onClickHome={() => {
           scrollToSection(heroSectionRef);
         }}
@@ -44,13 +50,18 @@ export default function Home() {
       >
         <ThemeButton />
       </Header>
-
+      <HeaderExpanded setIsHamburgerClicked={setIsHamburgerClicked} isHamburgerClicked={isHamburgerClicked} onClickHome={() => {
+          scrollToSection(heroSectionRef);
+        }}
+        onClickAbout={() => {
+          scrollToSection(aboutMeSectionRef);
+        }}
+        onClickProjects={() => scrollToSection(projectsSectionRef)}></HeaderExpanded>
       <div className="" ref={heroSectionRef}></div>
-      <Hero onClick={() => scrollToSection(projectsSectionRef)}></Hero>
-
-      {/*  <main
-      className={`pt-[5rem] pb-[0.5rem] bg-[#EEEFF2] dark:bg-[#1A1C21] ${inter.className}`}
-    > */}
+      <Hero scrollToProjectSection={() => scrollToSection(projectsSectionRef)}></Hero>
+      {/* TODO: remove? <Hero scrollToProjectSection={() => scrollToSection(projectsSectionRef)} scrollToAboutSection={() => scrollToSection(aboutMeSectionRef)}></Hero>
+ */}
+      
       <main className={`bg-white dark:bg-[#23272F]`}>
         <div className="" ref={aboutMeSectionRef}></div>
         <Section
@@ -61,9 +72,9 @@ export default function Home() {
           <div className="w-full flex flex-col justify-evenly lg:flex-row gap-6">
             {/* lg:w-[50%] and justify-evenly is a temporary solution... surely another way to fix this?  */}
             <div className="sm:w-[90%] md:w-[80%] lg:w-full flex flex-col gap-6 items-start text-start">
-              <h4>Get to know me!</h4>
+              <h4 className="text-black dark:text-white ">Get to know me!</h4>
               <div className="">
-                <p className="text-[#7c7c7c] dark:text-[#959eae]">
+                <p className="">
                   I live in Stockholm and I am currently studying <strong>Fullstack development</strong> with focus on Frontend. In Frontend I have done projects in everything
                   from CSS & HTML to JavaScript, React, Nextjs,
                   ...fillinblank... In backend I have done projects in ...fillinblank... .Before my coding journey
@@ -75,13 +86,13 @@ export default function Home() {
                 </p>
               </div>
               {/*  <a href="#projects"> */}
-              <ProjectAndContactButton
+              <ProjectandContactButton
                 title={"CONTACT"}
-              ></ProjectAndContactButton>
+              ></ProjectandContactButton>
               {/*  </a> */}
             </div>
             <div className="sm:w-[90%] md:w-[80%] lg:w-full flex flex-col gap-6 items-start text-start">
-              <h4>My Skills</h4>
+              <h4 className="text-black dark:text-white ">My Skills</h4>
               {/* <p className="text-[#7c7c7c] dark:text-[#959eae]">Check my CV for a description of my <strong>Masters in Economics</strong> I took in 2022!</p> */}
               <Skills></Skills>
             </div>
@@ -128,7 +139,7 @@ export default function Home() {
               transparentImgBg={false}
             >
               Simple HTML & CSS project I made during one of the first workshops
-              at Chas Academy, learning about forms and submit buttons. I tried
+              at Chas Academy. I learned about submitting forms and delving deep into another site's code and design through DevTools. I tried
               replicating{" "}
               <Link
                 className="text-[#7c7c7c] dark:text-[#959eae]"

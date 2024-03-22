@@ -6,7 +6,7 @@ export default function Section({title, bgcolor, darkbgcolor, children}) {
       <div className="flex flex-col text-center items-center">
 
         <div className="flex flex-col items-center gap-4 pb-12">
-          <h2 className="text-3xl lg:text-5xl font-extrabold mt-6 mb-0">{title}
+          <h2 className="text-black dark:text-white text-3xl lg:text-5xl font-extrabold mt-6 mb-0">{title}
           </h2>
           <div className="flex justify-center items-center sectionTitleUnderline bg-black dark:bg-white"></div>
         </div>

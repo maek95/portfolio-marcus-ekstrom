@@ -14,7 +14,7 @@ export const useThemeDispatch = () => useContext(ThemeDispatchContext);
 const initialState = {
   //theme: "light",
   userPreferences: {
-    theme: "dark",
+    theme: "light", // TODO: we can set initial state to "dark" but we'll see a small flash of white before it runs its useEffect. Need server-side pre-rendering?
     fontSize: "medium",
     reduceAnimations: false,
   },

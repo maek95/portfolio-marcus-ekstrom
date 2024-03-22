@@ -34,8 +34,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ThemeProvider>
-        <PreventZoom></PreventZoom>
-        <ThemeState></ThemeState> {/* see main.jsx, adds or removes the 'dark' mode with tailwind */}
+        <PreventZoom></PreventZoom> {/* prevent zoom on mobile */}
+        <ThemeState></ThemeState> {/* see main.jsx, runs an useEffect to add "darkmode" with tailwind */}
         <body className="font-sourceSans">{children}</body>
       </ThemeProvider>
     </html>
