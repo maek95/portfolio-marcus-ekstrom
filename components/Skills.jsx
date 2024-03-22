@@ -32,7 +32,7 @@ export default function Skills() {
       <Skill skillName={"CSS"}></Skill>
       <Skill skillName={"Figma"}></Skill>
       <Skill skillName={"Tailwind"}></Skill>
-      <Skill skillName={"GIT"}></Skill>
+      <Skill skillName={"Git"}></Skill>
       <Skill skillName={"GitHub"}></Skill>
       <Skill skillName={"Terminal"}></Skill>   
     </div>
