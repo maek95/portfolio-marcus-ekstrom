@@ -1,7 +1,11 @@
 /* import ProjectandContactButton from "@/components/ProjectandContactButton"; */
+import { useContext } from "react";
 import BlueButton from "./BlueButton";
+import { SectionRefContext } from "@/SectionRefContext";
 
-export default function Hero({scrollToProjectSection, scrollToAboutSection}) {
+export default function Hero() {
+
+  const { scrollToSection, projectsSectionRef } = useContext(SectionRefContext);
 
   return (
     <div className="h-lvh flex justify-center items-center bg-[#EEEFF2] dark:bg-[#1A1C21] min-w-full"> {/* TODO: h-96 or h-lvh? */}
@@ -9,10 +13,12 @@ export default function Hero({scrollToProjectSection, scrollToAboutSection}) {
 
         {/* mt-[-5rem] because Header is h-20 and pushes Hero down 5rem */}
         <h1 className="text-black dark:text-white  text-5xl lg:text-6xl font-extrabold mx-4 mt-[-5rem]">HI, I'M MARCUS EKSTRÖM</h1>
-        <p>Fullstack developer student</p>
+        <p className="mx-4">Fullstack developer student based in Stockholm</p>
 
         <div>
-          <BlueButton onClick={scrollToProjectSection} title={"PROJECTS"}></BlueButton>
+          <BlueButton onClick={() => {
+            scrollToSection(projectsSectionRef)
+          }} title={"PROJECTS"}></BlueButton>
           {/* <ProjectandContactButton onClick={scrollToAboutSection} title={"ABOUT ME"}></ProjectandContactButton> */}
         </div>
       </div>

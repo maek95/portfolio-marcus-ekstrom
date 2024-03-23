@@ -2,7 +2,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/ThemeContext";
 import ThemeState from "./main";
 import PreventZoom from "./preventZoom";
-import { Viewport } from 'next'
+import { SectionRefProvider } from "@/SectionRefContext";
 
 
 
@@ -34,9 +34,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ThemeProvider>
-        <PreventZoom></PreventZoom> {/* prevent zoom on mobile */}
-        <ThemeState></ThemeState> {/* see main.jsx, runs an useEffect to add "darkmode" with tailwind */}
-        <body className="font-sourceSans">{children}</body>
+        <SectionRefProvider>
+          <PreventZoom></PreventZoom> {/* prevent zoom on mobile */}
+          <ThemeState></ThemeState> {/* see main.jsx, runs an useEffect to add "darkmode" with tailwind */}
+          <body className="font-sourceSans">{children}</body>
+        </SectionRefProvider>
       </ThemeProvider>
     </html>
   );

@@ -1,11 +1,16 @@
 "use client"
+import { SectionRefContext } from "@/SectionRefContext";
 /* npm install hamburger-react
 https://www.npmjs.com/package/hamburger-react
  */
 import Hamburger from "hamburger-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import ThemeButton from "./ThemeButton";
 
-export default function Header({ children, onClickHome, onClickAbout, onClickProjects, isHamburgerClicked, setIsHamburgerClicked }) {
+
+export default function Header({ isHamburgerClicked, setIsHamburgerClicked}) {
+
+  const { projectsSectionRef, aboutMeSectionRef, heroSectionRef, contactSectionRef, scrollToSection } = useContext(SectionRefContext)
 
   console.log(isHamburgerClicked);
 
@@ -53,7 +58,7 @@ export default function Header({ children, onClickHome, onClickAbout, onClickPro
           {}
           {/* https://hamburger-react.netlify.app for props guide */}
           <div className="flex sm:hidden">
-            <Hamburger toggled={isHamburgerClicked} toggle={setIsHamburgerClicked}></Hamburger>
+            <Hamburger toggled={isHamburgerClicked} toggle={setIsHamburgerClicked} style={{ transition: 'color 0ms' }}></Hamburger>
           </div>
           {/* <svg
           height="32px"
@@ -71,13 +76,21 @@ export default function Header({ children, onClickHome, onClickAbout, onClickPro
           </svg> */}
         </div>
         <ul className="hidden sm:flex flex-row items-center justify-center font-semibold">
-          <li onClick={onClickHome} className="list-none cursor-pointer hover:text-[#347FC1] hover:underline px-4 py-4">Home</li>
-          <li onClick={onClickAbout} className="list-none cursor-pointer hover:text-[#347FC1] hover:underline pr-4 py-4">About</li>
-          <li onClick={onClickProjects} className="list-none cursor-pointer hover:text-[#347FC1] hover:underline pr-4 py-4">Projects</li>
-          <li className="list-none cursor-pointer hover:text-[#347FC1] hover:underline pr-4 py-4">Contact</li>
-          <li className="hidden sm:flex items-center justify-center">{children}</li> {/* // ThemeButton.jsx */}
+          <li onClick={() => {
+            scrollToSection(heroSectionRef)
+          }} className="list-none cursor-pointer hover:text-[#347FC1] hover:underline px-4 py-4">Home</li>
+          <li onClick={() => {
+            scrollToSection(aboutMeSectionRef)
+          }} className="list-none cursor-pointer hover:text-[#347FC1] hover:underline pr-4 py-4">About</li>
+          <li onClick={() => {
+            scrollToSection(projectsSectionRef)
+          }} className="list-none cursor-pointer hover:text-[#347FC1] hover:underline pr-4 py-4">Projects</li>
+          <li onClick={() => {
+            scrollToSection(contactSectionRef)
+          }} className="list-none cursor-pointer hover:text-[#347FC1] hover:underline pr-4 py-4">Contact</li>
+          <li className="hidden sm:flex items-center justify-center"><ThemeButton/></li> {/* // ThemeButton.jsx */}
         </ul>
-        <li className="flex sm:hidden items-center justify-center">{children}</li> {/* // ThemeButton.jsx */}
+        <li className="flex sm:hidden items-center justify-center"><ThemeButton/></li> {/* // ThemeButton.jsx */}
 
         
       </div>
