@@ -29,6 +29,7 @@ export default function Home() {
   // TODO: useContext for onClickHome onClickAbout onClickProjects? just look at ThemeContext and do same thing kinda?
   // TODO: remove color transition duration on hamburger button when we swap dark/light mode? since nothing else does that
   // TODO: fade in/out display hidden / flex HeaderExpanded?
+  // TODO: maybe make the gap a little smaller between e.g. Quiz App and the previewImage?
 
   function scrollToSection(sectionRef) {
     const yOffset = -80; // Adjust this value to change the offset

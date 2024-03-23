@@ -1,14 +1,14 @@
 "use client"
-// preventZoom.jsx
 import { useEffect } from "react";
 
 export default function PreventZoom() {
   useEffect(() => {
     const preventZoom = (e) => {
       e.preventDefault();
-      document.body.style.zoom = 0.99; // Or any other value to prevent zoom
+      document.body.style.zoom = 0.99; // will always stay 99% 
     };
 
+    // e.g. pinching on mobile just keeps it at 99% zoom
     document.documentElement.addEventListener("gesturestart", preventZoom);
     document.documentElement.addEventListener("gesturechange", preventZoom);
     document.documentElement.addEventListener("gestureend", preventZoom);

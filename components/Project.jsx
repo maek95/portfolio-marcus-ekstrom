@@ -13,7 +13,7 @@ export default function Project({
   children,
 }) {
 
-  // complicated img tag since I wanted hover features but also take in consideration that some images have transparent backgrounds and I don't want hover to trigger on the invisible background! Among other things I have a conditional in the inline-styling of inset, where it is set to inset-[18%] for the images with invisible backgrounds and inset-[0] for those with fully visible backgrounds!
+  
   return (
     <>
       <Card>
@@ -23,7 +23,7 @@ export default function Project({
 
             <div className="relative">
               <img
-                className="w-fit h-[200px] md:h-[300px] lg:h-fit lg:w-[500px] rounded-lg duration-500 transition-transform"
+                className="w-full h-[200px] md:h-[300px] lg:h-full lg:w-[500px] rounded-lg duration-500 transition-transform"
                 src={imgSrc}
                 alt="<preview img>"
                 style={{
@@ -32,6 +32,7 @@ export default function Project({
                 }}
               />
 
+              {/* invisible div that covers the img above, and when you hover over it the img scales to 110% size. This allowed me to decide when I want the scaling to  occur, e.g. when hovering further into the picture */}
               <div
                 className={`z-1 absolute ${transparentImgBg ? 'inset-[18%]' : 'inset-[0]'} rounded-lg hover:scale-110 duration-500 transition-transform cursor-pointer`}
                 style={{ pointerEvents: "auto" }}
