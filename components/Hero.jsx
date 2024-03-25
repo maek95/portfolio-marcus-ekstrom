@@ -9,10 +9,9 @@ export default function Hero() {
 
   return (
     <div className="h-lvh flex justify-center items-center bg-[#EEEFF2] dark:bg-[#1A1C21] min-w-full"> {/* TODO: h-96 or h-lvh? */}
-      <div className="flex flex-col gap-12 text-center sm:w-[70%]">
-
-        {/* mt-[-5rem] because Header is h-20 and pushes Hero down 5rem */}
-        <h1 className="text-black dark:text-white  text-5xl lg:text-6xl font-extrabold mx-4 mt-[-5rem]">HI, I'M MARCUS EKSTRÖM</h1>
+      {/* mt-[-5rem] because <Header> is h-20 and pushes Hero down 5rem */}
+      <div className="mt-[-5rem] flex flex-col gap-12 text-center sm:w-[70%]">
+        <h1 className="text-black dark:text-white text-5xl lg:text-6xl font-extrabold mx-4 ">HI, I'M MARCUS EKSTRÖM</h1>
         <p className="mx-4">Fullstack developer student based in Stockholm</p>
 
         <div>

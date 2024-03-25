@@ -55,9 +55,9 @@ export default function Header({ isHamburgerClicked, setIsHamburgerClicked}) {
           alt="hamburger menu"
         /> */}
          <div className="flex items-center">
-          {}
-          {/* https://hamburger-react.netlify.app for props guide */}
-          <div className="flex sm:hidden">
+          
+          {/* https://hamburger-react.netlify.app for props guide, STYLE TRANSITION NOT WORKING... <Hamburger> has built in duration prop but that affects all animations...*/}
+          <div className="flex sm:hidden bg-inherit"> {/* TESTING bg-inherit to fix flicker on mobile..? */}
             <Hamburger toggled={isHamburgerClicked} toggle={setIsHamburgerClicked} style={{ transition: 'color 0ms' }}></Hamburger>
           </div>
           {/* <svg

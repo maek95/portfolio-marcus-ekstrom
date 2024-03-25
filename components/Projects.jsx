@@ -19,7 +19,7 @@ export default function Projects() {
       </Project>
 
       <Project
-        title={"Figma App"}
+        title={"Figma Design"}
         projectLink={
           "https://www.figma.com/proto/7EXISjrUDnc5rQEhkxgSAX/my-Health-app?node-id=19-297&starting-point-node-id=19%3A297&mode=design&t=JFTobLpRmywpSry4-1"
         }
@@ -27,7 +27,7 @@ export default function Projects() {
         transparentImgBg={true}
       >
         At Chas Academy we had a 1-week segment about Figma and I made a simple
-        App! It gave me some insight on how Designers may work with Figma, or if
+        design! It gave me some insight on how Designers may work with Figma, or if
         I want to brainstorm design ideas for a new project.
       </Project>
       <Project
