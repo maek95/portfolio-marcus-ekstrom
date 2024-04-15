@@ -16,13 +16,11 @@ export default function AboutMe() {
           <p className="">
             I live in Stockholm and I am currently studying{" "}
             <strong>Fullstack development</strong> with focus on Frontend. In
-            Frontend I have done projects in everything from CSS & HTML to
-            JavaScript, React, Nextjs, ...fillinblank... In backend I have done
-            projects in ...fillinblank... .Before my coding journey began I took
+            Frontend I have done projects in everything from basic CSS & HTML to
+            JavaScript, React, and Nextjs. In backend I have worked with Express.js (Node) and MySQL, and I have combined it with frontend for fullstack projects. Regarding fullstack projects, I have deployed them using Amazon AWS EC2 instances, PM2, and Docker. Before my coding journey began I took
             a <strong>Masters in Economics</strong> at Stockholm University,
             where my Master Thesis involved analyzing large datasets using
-            Vector Autoregression (VAR) and MATLAB. After that I also took
-            individual university-courses in C++, Java, and Kotlin.{" "}
+            Vector Autoregression (VAR) and MATLAB. Following my masters I also took individual university-courses in C++, Java, and Kotlin, before investing wholeheartedly into frontend developing!{" "}
           </p>
         </div>
         {/*  <a href="#projects"> */}

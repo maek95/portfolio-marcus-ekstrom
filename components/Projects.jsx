@@ -6,6 +6,17 @@ import BlueButton from "./BlueButton";
 export default function Projects() {
   return (
     <div className="grid grid-cols-1 gap-5">
+
+      <Project
+        title={"Bank App (currently working on)"}
+        projectLink={""}
+        imgSrc={"/bank-app-preview3.png"}
+        transparentImgBg={true}
+        isFinished={false}
+      >
+        Fullstack bank-project I am currently working on, using React Nextjs on frontend and Express.js (Node) and mySQL on backend. I am also working on deploying this project through Amazon AWS and Docker. This is my first project using backend!
+      </Project>
+
       <Project
         title={"Quiz App"}
         projectLink={"https://23-chas-quiz.vercel.app"}
@@ -16,6 +27,15 @@ export default function Projects() {
         how to work as a group in GitHub and solving merge conflicts. We also
         refined our skills in handling state through useState, global state
         (Redux store), and localStorage.
+      </Project>
+
+      <Project
+        title={"News Site (Desktop)"}
+        projectLink={"https://workshop-22-chas-news.vercel.app"}
+        imgSrc={"/chasNewsPreview.png"}
+        transparentImgBg={true}
+      >
+        A simple news site where I refined my skills in fetching articles from a news API on server-side and storing bookmarks using Context. Also, as a workaround to this free API having very limited fetches, I utilized cache to only fetch articles when necessary.
       </Project>
 
       <Project
@@ -36,9 +56,9 @@ export default function Projects() {
         imgSrc={"/NordeaPagePreview.png"}
         transparentImgBg={false}
       >
-        Simple HTML & CSS project I made during one of the first workshops at
+        A basic HTML & CSS project I made during one of the first workshops at
         Chas Academy. I learned about submitting forms and delving deep into
-        another site's code and design through DevTools. I tried replicating{" "}
+        another website's design through DevTools. I tried replicating{" "}
         <Link // hydration error if using <a> ?
           className="text-[#7c7c7c] dark:text-[#959eae]"
           href={
@@ -60,6 +80,7 @@ function Project({
   projectLink,
   imgSrc,
   transparentImgBg,
+  isFinished = true, // Default value is true
   children,
 }) {
   return (
@@ -80,7 +101,7 @@ function Project({
                 }}
               />
 
-              {/* invisible div that covers the img above... hover over it and it scales the img to 110% size. I did this instead of having the hover-feature directly on the image because now I can trigger the zoom only when hovering further into a picture if I want (see inset-[18%]). */}
+              {/* invisible div that covers the img above... hover over it and it scales the img to 110% size. I did this instead of having the hover-feature directly on the image because now I can trigger the zoom when hovering further into a picture if I want (see inset-[18%]). */}
               <div
                 className={`z-1 absolute ${
                   transparentImgBg ? "inset-[18%]" : "inset-[0]"
@@ -107,9 +128,10 @@ function Project({
             <div className="w-full">
               <p className="">{children}</p>
             </div>
-            <Link href={projectLink} target="_blank">
-              <BlueButton title={"Project Link"}></BlueButton>
-            </Link>
+            {/* wrapped Link around Button instead of sending a complex onClick function to BlueButton for opening a link... */}
+           {isFinished ? (<Link href={projectLink} target="_blank"> 
+              <BlueButton title={"Project Link"}/>
+            </Link>) : ("")}
           </div>
         </div>
       </Card>

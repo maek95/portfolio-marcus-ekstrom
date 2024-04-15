@@ -26,6 +26,7 @@ export default function Skills() {
       <Skill skillName={"Zustand"}/>
       <Skill skillName={"Next.js"}/>
       <Skill skillName={"Node.js"}/>
+      <Skill skillName={"Express.js"}/>
       <Skill skillName={"JavaScript"}/>
       <Skill skillName={"TypeScript"}/>
       <Skill skillName={"HTML5"}/>
