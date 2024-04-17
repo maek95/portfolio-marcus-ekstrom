@@ -9,12 +9,12 @@ export default function Projects() {
 
       <Project
         title={"Bank App (currently working on)"}
-        projectLink={""}
+        projectLink={"http://16.171.111.156:3000"}
         imgSrc={"/bank-app-preview3.png"}
         transparentImgBg={true}
         isFinished={false}
       >
-        Fullstack bank-project I am currently working on, using React Nextjs on frontend and Express.js (Node) and mySQL on backend. I am also working on deploying this project through Amazon AWS and Docker. This is my first project using backend!
+        Built as a full-stack banking application, this project utilizes React with Next.js for the frontend, while Express.js with Node.js and MySQL for the backend. Deployment is managed through Docker, hosted on an AWS Amazon EC2 instance. To streamline the deployment process, a deploy.yml script automatically updates the site whenever changes are pushed to GitHub.
       </Project>
 
       <Project
