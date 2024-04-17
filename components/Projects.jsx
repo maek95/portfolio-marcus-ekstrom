@@ -8,17 +8,17 @@ export default function Projects() {
     <div className="grid grid-cols-1 gap-5">
 
       <Project
-        title={"Bank App (currently working on)"}
+        title={"Fullstack Bank Site"}
         projectLink={"http://16.171.111.156:3000"}
         imgSrc={"/bank-app-preview3.png"}
         transparentImgBg={true}
         isFinished={false}
       >
-        Built as a full-stack banking application, this project utilizes React with Next.js for the frontend, while Express.js with Node.js and MySQL for the backend. Deployment is managed through Docker, hosted on an AWS Amazon EC2 instance. To streamline the deployment process, a deploy.yml script automatically updates the site whenever changes are pushed to GitHub.
+        Built as a full-stack banking website, this project utilizes React with Next.js for the frontend, while Express.js with Node.js and MySQL for the backend. Deployment is managed through Docker, hosted on an AWS Amazon EC2 instance. To streamline the deployment process, a deploy.yml script automatically updates the site whenever changes are pushed to GitHub.
       </Project>
 
       <Project
-        title={"Quiz App"}
+        title={"Quiz Site"}
         projectLink={"https://23-chas-quiz.vercel.app"}
         imgSrc={"/myQuizAppPreview.png"}
         transparentImgBg={true}
