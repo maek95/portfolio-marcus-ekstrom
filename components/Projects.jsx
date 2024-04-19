@@ -12,9 +12,8 @@ export default function Projects() {
         projectLink={"http://16.171.111.156:3000"}
         imgSrc={"/bank-app-preview3.png"}
         transparentImgBg={true}
-        isFinished={false}
       >
-        Built as a full-stack banking website, this project utilizes React with Next.js for the frontend, while Express.js with Node.js and MySQL for the backend. Deployment is managed through Docker, hosted on an AWS Amazon EC2 instance. To streamline the deployment process, a deploy.yml script automatically updates the site whenever changes are pushed to GitHub.
+        Built as a full-stack banking website, this project utilizes React with Next.js for the frontend, while Express.js with Node.js and MySQL for the backend. Deployment is managed through Docker, hosted on an AWS Amazon EC2 instance. Moreover, I utilized cookies in order to securely store session tokens when transitioning between login and account page. To streamline the deployment process, a deploy.yml script automatically updates the site whenever changes are pushed to GitHub.
       </Project>
 
       <Project
