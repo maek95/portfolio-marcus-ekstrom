@@ -9,7 +9,7 @@ export default function Projects() {
 
       <Project
         title={"Fullstack Bank Site"}
-        projectLink={"http://16.171.111.156:3000"}
+        projectLink={"http://13.53.190.247:3000"}
         imgSrc={"/bank-app-preview3.png"}
         transparentImgBg={true}
       >
