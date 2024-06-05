@@ -21,6 +21,7 @@ export default function AboutMe() {
             frontend for fullstack projects. Regarding fullstack projects, I
             have deployed them using Amazon AWS EC2 instances, PM2, and Docker.
             <br />
+            <br />
             Before my coding journey began I took a{" "}
             <strong>Masters in Economics</strong> at Stockholm University, where
             my Master Thesis involved analyzing large datasets using Vector
