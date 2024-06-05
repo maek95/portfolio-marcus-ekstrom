@@ -13,8 +13,8 @@ export default function AboutMe() {
         <h4 className="text-black dark:text-white ">Get to know me!</h4>
         <div className="">
           <p className="">
-            I live in Stockholm and I am currently studying{" "}
-            <strong>Fullstack development with focus on Frontend</strong>. In
+            I live in Stockholm and I am currently enrolled at Chas Academy (university), studying{" "}
+            <strong>Fullstack development with a focus on Frontend</strong>. In
             Frontend I have worked with everything from basic CSS & HTML to
             JavaScript, React.js, Next.js, and React Native. In backend I have
             worked with Express.js (Node) and MySQL, and I have combined it with
