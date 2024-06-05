@@ -19,7 +19,8 @@ export default function Skills() {
   return (
     <div className="flex flex-col gap-4">
     <div className="flex flex-wrap gap-4"> {/* went with flex-wrap instead of grid,to avoid resizing. I want divs to fall down to a new line if needed instead */}
-      <Skill skillName={"React"}/>
+      <Skill skillName={"React.js"}/>
+      <Skill skillName={"React Native"}/>
       <Skill skillName={"Redux"}/>
       <Skill skillName={"Vite"}/>
       <Skill skillName={"Radix"}/>

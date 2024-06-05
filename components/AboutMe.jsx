@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { SectionRefContext } from "@/SectionRefContext";
 
 export default function AboutMe() {
-
   const { scrollToSection, contactSectionRef } = useContext(SectionRefContext);
 
   return (
@@ -15,18 +14,28 @@ export default function AboutMe() {
         <div className="">
           <p className="">
             I live in Stockholm and I am currently studying{" "}
-            <strong>Fullstack development</strong> with focus on Frontend. In
-            Frontend I have done projects in everything from basic CSS & HTML to
-            JavaScript, React, and Nextjs. In backend I have worked with Express.js (Node) and MySQL, and I have combined it with frontend for fullstack projects. Regarding fullstack projects, I have deployed them using Amazon AWS EC2 instances, PM2, and Docker. Before my coding journey began I took
-            a <strong>Masters in Economics</strong> at Stockholm University,
-            where my Master Thesis involved analyzing large datasets using
-            Vector Autoregression (VAR) and MATLAB. Following my masters I also took individual university-courses in C++, Java, and Kotlin, before investing wholeheartedly into frontend developing!{" "}
+            <strong>Fullstack development with focus on Frontend</strong>. In
+            Frontend I have worked with everything from basic CSS & HTML to
+            JavaScript, React.js, Next.js, and React Native. In backend I have
+            worked with Express.js (Node) and MySQL, and I have combined it with
+            frontend for fullstack projects. Regarding fullstack projects, I
+            have deployed them using Amazon AWS EC2 instances, PM2, and Docker.
+            <br />
+            Before my coding journey began I took a{" "}
+            <strong>Masters in Economics</strong> at Stockholm University, where
+            my Master Thesis involved analyzing large datasets using Vector
+            Autoregression (VAR) and MATLAB. Following my masters I also took
+            individual university-courses in C++, Java, and Kotlin, before
+            investing wholeheartedly into frontend developing!{" "}
           </p>
         </div>
         {/*  <a href="#projects"> */}
-        <BlueButton title={"CONTACT"} onClick={() => {
-            scrollToSection(contactSectionRef)
-          }}></BlueButton>
+        <BlueButton
+          title={"CONTACT"}
+          onClick={() => {
+            scrollToSection(contactSectionRef);
+          }}
+        ></BlueButton>
         {/*  </a> */}
       </div>
       <div className="sm:w-[90%] md:w-[80%] lg:w-full flex flex-col gap-6 items-start text-start">
