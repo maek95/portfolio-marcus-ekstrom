@@ -27,7 +27,7 @@ export default function AboutMe() {
             my Master Thesis involved analyzing large datasets using Vector
             Autoregression (VAR) and MATLAB. Following my masters I also took
             individual university-courses in C++, Java, and Kotlin, before
-            investing wholeheartedly into frontend developing!{" "}
+            investing wholeheartedly into fullstack/frontend developing!{" "}
           </p>
         </div>
         {/*  <a href="#projects"> */}
