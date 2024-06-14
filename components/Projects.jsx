@@ -61,7 +61,7 @@ export default function Projects() {
         (Redux store), and localStorage.
       </Project>
 
-      <Project
+      {/* <Project
         title={"News Site (Desktop)"}
         projectLink={"https://workshop-22-chas-news.vercel.app"}
         imgSrc={"/chasNewsPreview.png"}
@@ -69,7 +69,7 @@ export default function Projects() {
       >
         A simple news site where I refined my skills in fetching articles from a news API on server-side and storing bookmarks using Context. Also, as a workaround to this free API having very limited fetches, I utilized cache to only fetch articles when necessary.
       </Project>
-
+ */}
       <Project
         title={"Figma Design"}
         projectLink={
