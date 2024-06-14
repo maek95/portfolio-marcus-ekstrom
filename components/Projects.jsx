@@ -8,6 +8,39 @@ export default function Projects() {
     <div className="grid grid-cols-1 gap-5">
 
       <Project
+        title={"Price winner LUDI - combining AI with a Movie Database"}
+        projectLink={"https://ludi-app.com"}
+        imgSrc={"/ludi_mockups_together.png"}
+        transparentImgBg={false}
+      >  
+          <Link // hydration error if using <a> ?
+          className="text-[#7c7c7c] dark:text-[#959eae]"
+          href={
+            "https://ludi-app.com"
+          }
+          target="_blank"
+        >
+          https://ludi-app.com
+        </Link>
+        <br/>
+        <br/>
+        At Chas Academy we had a 2-month long segment where 13 teams competed for the best website that incorporated AI. Here is the {" "}
+        <Link // hydration error if using <a> ?
+          className="text-[#7c7c7c] dark:text-[#959eae]"
+          href={
+            "https://www.linkedin.com/posts/chas-academy_chaschallenge2024-ai-ludi-activity-7207003804821516289-pkle?utm_source=share&utm_medium=member_desktop"
+          }
+          target="_blank"
+        >
+        university's offical LinkedIn post
+        </Link>
+        {" "}showing my team winning! It was a very fulfilling experience where I worked with basically all aspects of a website; Frontend (Next.js), Backend (node.js/express.js), Database (MySQL), Deployment (deploy.yml, AWS EC2, Docker), and overall styling using Tailwind/CSS. 
+        <br/>
+        <br/>
+        We utilized Scrum and Trello to get a sense of a real workplace, where we clocked in at 9:00am for Daily Standups and performed 1-week Sprints.
+      </Project>
+
+      <Project
         title={"Fullstack Bank Site"}
         projectLink={"http://13.53.190.247:3000"}
         imgSrc={"/bank-app-preview3.png"}
