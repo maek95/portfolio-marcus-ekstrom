@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/ThemeContext";
 import ThemeState from "./main";
 import PreventZoom from "./preventZoom";
 import { SectionRefProvider } from "@/SectionRefContext";
+import { Analytics } from "@vercel/analytics/react"
 
 
 
@@ -37,7 +38,10 @@ export default function RootLayout({ children }) {
         <SectionRefProvider>
           <PreventZoom></PreventZoom> {/* prevent zoom on mobile */}
           <ThemeState></ThemeState> {/* see main.jsx, runs an useEffect to add "darkmode" with tailwind */}
-          <body className="font-sourceSans">{children}</body>
+          <body className="font-sourceSans">
+            {children}
+            <Analytics/>
+          </body>
         </SectionRefProvider>
       </ThemeProvider>
     </html>
