@@ -38,6 +38,8 @@ export default function Projects() {
         <br/>
         <br/>
         We utilized Scrum and Trello to get a sense of a real workplace, where we clocked in at 9:00am for Daily Standups and performed 1-week Sprints.
+
+        Most recent addition: I migrated the MySQL database to an AWS RDS instance instead of Docker, to hopefully provide more stability.
       </Project>
 
       <Project
