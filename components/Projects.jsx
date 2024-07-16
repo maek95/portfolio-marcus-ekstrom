@@ -49,7 +49,7 @@ export default function Projects() {
       <Project
         title={"React Native memory game (video showcase)"}
         githubLink={"https://github.com/maek95/react-native-memory-game-FULLSTACK"}
-        videoSrc={"/memory-game-showcase3-mp4.mp4"}
+        videoSrc={"https://www.youtube.com/shorts/73QNoHy37KQ"}
        // transparentImgBg={true}
       >
         My first React Native project; the player must remember and replicate the order in which the circle's slices flash purple. The player has five seconds to complete the sequence, and pressing a wrong slice gives a 1 second penalty. If the timer reaches 0 the player loses and they can quickly start over or select a new difficulty.
@@ -151,17 +151,16 @@ function Project({
           <div className="flex w-full justify-center">
             {/* <a className="relative" href={projectLink}> */}
 
-            {videoSrc && <video
-                className="w-full h-[300px] md:h-[400px] lg:h-[500px] lg:w-auto rounded-lg"
-                //src={videoSrc} // multiple <source /> for compatibilty, mobile etc.
-                alt="<preview video>"
-                controls
-              > 
-                <source src={videoSrc} type="video/mp4" />
-               {/*  <source src={videoSrc.replace(".mp4", ".webm")} type="video/webm" />
-                <source src={videoSrc.replace(".mp4", ".ogg")} type="video/ogg" /> */}
-                Your browser does not support the video tag.
-              </video>}
+            {videoSrc && (<iframe // iframe "recommended" way to include YouTube content on your site... Using YouTube instead of local file, otherwise the bandwidth is too much for mobile browsers...
+              className="w-full h-[300px] md:h-[400px] lg:h-[500px] lg:w-auto lg:min-w-[500px] rounded-lg"
+              src="https://www.youtube.com/embed/73QNoHy37KQ"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+            )
+            }
            {imgSrc && <div className="relative">
               <img
                 className="w-full h-[200px] md:h-[300px] lg:h-full lg:w-[500px] rounded-lg duration-500 transition-transform"
