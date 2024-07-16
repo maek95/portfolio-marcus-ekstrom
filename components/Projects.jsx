@@ -128,6 +128,9 @@ export default function Projects() {
           Nordea's feedback page
         </Link>
         .
+        <br/>
+        <br/>
+        <strong>Note:</strong> To view the page (Project Link below) <strong>you may have to refresh the page once when entering</strong>, due to the nature of being a raw HTML page.
       </Project>
     </div>
   );
