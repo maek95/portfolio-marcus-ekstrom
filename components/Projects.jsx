@@ -49,7 +49,7 @@ export default function Projects() {
       <Project
         title={"React Native memory game (video showcase)"}
         githubLink={"https://github.com/maek95/react-native-memory-game-FULLSTACK"}
-        videoSrc={"/memory-game-showcase3.webm"}
+        videoSrc={"/memory-game-showcase3-mp4.mp4"}
        // transparentImgBg={true}
       >
         My first React Native project; the player must remember and replicate the order in which the circle's slices flash purple. The player has five seconds to complete the sequence, and pressing a wrong slice gives a 1 second penalty. If the timer reaches 0 the player loses and they can quickly start over or select a new difficulty.
