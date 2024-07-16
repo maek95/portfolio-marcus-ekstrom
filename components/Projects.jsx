@@ -6,25 +6,23 @@ import BlueButton from "./BlueButton";
 export default function Projects() {
   return (
     <div className="grid grid-cols-1 gap-5">
-
       <Project
         title={"Price winner LUDI - combining AI with a Movie Database"}
         projectLink={"https://ludi-app.com"}
         imgSrc={"/ludi_mockups_together.png"}
         transparentImgBg={false}
-      >  
-          <Link // hydration error if using <a> ?
+      >
+        <Link // hydration error if using <a> ?
           className="text-[#7c7c7c] dark:text-[#959eae]"
-          href={
-            "https://ludi-app.com"
-          }
+          href={"https://ludi-app.com"}
           target="_blank"
         >
           https://ludi-app.com
         </Link>
-        <br/>
-        <br/>
-        At Chas Academy we had a 2-month long segment where 13 teams competed for the best website that incorporated AI. Here is the {" "}
+        <br />
+        <br />
+        At Chas Academy we had a 2-month long segment where 13 teams competed
+        for the best website that incorporated AI. Here is the{" "}
         <Link // hydration error if using <a> ?
           className="text-[#7c7c7c] dark:text-[#959eae]"
           href={
@@ -32,15 +30,35 @@ export default function Projects() {
           }
           target="_blank"
         >
-        university's offical LinkedIn post
-        </Link>
-        {" "}showing my team winning! It was a very fulfilling experience where I worked with basically all aspects of a website; Frontend (Next.js), Backend (node.js/express.js), Database (MySQL), Deployment (deploy.yml, AWS EC2, Docker), and overall styling using Tailwind/CSS. 
+          university's offical LinkedIn post
+        </Link>{" "}
+        showing my team winning! It was a very fulfilling experience where I
+        worked with basically all aspects of a website; Frontend (Next.js),
+        Backend (node.js/express.js), Database (MySQL), Deployment (deploy.yml,
+        AWS EC2, Docker), and overall styling using Tailwind/CSS.
+        <br />
+        <br />
+        We utilized Scrum and Trello to get a sense of a real workplace, where
+        we clocked in at 9:00am for Daily Standups and performed 1-week Sprints.
+        <br />
+        <br />
+        Most recent addition: I migrated the MySQL database to an AWS RDS
+        instance instead of Docker, to hopefully provide more stability.
+      </Project>
+
+      <Project
+        title={"React Native memory game (video showcase)"}
+        githubLink={"https://github.com/maek95/react-native-memory-game-FULLSTACK"}
+        videoSrc={"/memory-game-showcase3.webm"}
+       // transparentImgBg={true}
+      >
+        My first React Native project; the player must remember and replicate the order in which the circle's slices flash purple. The player has five seconds to complete the sequence, and pressing a wrong slice gives a 1 second penalty. If the timer reaches 0 the player loses and they can quickly start over or select a new difficulty.
         <br/>
         <br/>
-        We utilized Scrum and Trello to get a sense of a real workplace, where we clocked in at 9:00am for Daily Standups and performed 1-week Sprints.
+        The project utilizes Expo Router and the game itself is built with a SVG (the circle with slices) combined with Animations. 
         <br/>
         <br/>
-        Most recent addition: I migrated the MySQL database to an AWS RDS instance instead of Docker, to hopefully provide more stability.
+        Work in progress: create a backend to efficiently store player data - such as account creation, highscore, and custom difficulties.
       </Project>
 
       <Project
@@ -49,7 +67,13 @@ export default function Projects() {
         imgSrc={"/bank-app-preview3.png"}
         transparentImgBg={true}
       >
-        Built as a full-stack banking website, this project utilizes React with Next.js for the frontend, while Express.js with Node.js and MySQL for the backend. Deployment is managed through Docker, hosted on an AWS Amazon EC2 instance. Moreover, I utilized cookies in order to securely store session tokens when transitioning between login and account page. To streamline the deployment process, a deploy.yml script automatically updates the site whenever changes are pushed to GitHub.
+        Built as a full-stack banking website, this project utilizes React with
+        Next.js for the frontend, while Express.js with Node.js and MySQL for
+        the backend. Deployment is managed through Docker, hosted on an AWS
+        Amazon EC2 instance. Moreover, I utilized cookies in order to securely
+        store session tokens when transitioning between login and account page.
+        To streamline the deployment process, a deploy.yml script automatically
+        updates the site whenever changes are pushed to GitHub.
       </Project>
 
       <Project
@@ -82,8 +106,8 @@ export default function Projects() {
         transparentImgBg={true}
       >
         At Chas Academy we had a 1-week segment about Figma and I made a simple
-        design! It gave me some insight on how Designers may work with Figma, or if
-        I want to brainstorm design ideas for a new project.
+        design! It gave me some insight on how Designers may work with Figma, or
+        if I want to brainstorm design ideas for a new project.
       </Project>
       <Project
         title={"Replicated Nordea's website"}
@@ -113,7 +137,9 @@ function Project({
   title,
   description,
   projectLink,
+  githubLink,
   imgSrc,
+  videoSrc,
   transparentImgBg,
   isFinished = true, // Default value is true
   children,
@@ -125,7 +151,13 @@ function Project({
           <div className="flex w-full justify-center">
             {/* <a className="relative" href={projectLink}> */}
 
-            <div className="relative">
+            {videoSrc && <video
+                className="w-full h-[300px] md:h-[400px] lg:h-[500px] lg:w-auto rounded-lg"
+                src={videoSrc}
+                alt="<preview video>"
+                controls
+              />}
+           {imgSrc && <div className="relative">
               <img
                 className="w-full h-[200px] md:h-[300px] lg:h-full lg:w-[500px] rounded-lg duration-500 transition-transform"
                 src={imgSrc}
@@ -153,8 +185,7 @@ function Project({
                   window.open(projectLink, "_blank");
                 }}
               ></div>
-            </div>
-
+            </div>}
           </div>
 
           <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-start gap-4">
@@ -164,9 +195,18 @@ function Project({
               <p className="">{children}</p>
             </div>
             {/* wrapped Link around Button instead of sending a complex onClick function to BlueButton for opening a link... */}
-           {isFinished ? (<Link href={projectLink} target="_blank"> 
-              <BlueButton title={"Project Link"}/>
-            </Link>) : ("")}
+            {isFinished ? (<>
+              {projectLink && <Link className="no-underline" href={projectLink} target="_blank">
+                <BlueButton title={"Project Link"} />
+              </Link>}
+              {githubLink && <Link className="no-underline " href={githubLink} target="_blank">
+                
+                <BlueButton isGitHubLink={true} title={"GitHub Link"} />
+              </Link>}
+              </>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </Card>
