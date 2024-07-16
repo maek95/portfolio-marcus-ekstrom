@@ -44,6 +44,7 @@ export default function Home() {
           title="ABOUT ME"
           /* bgcolor={"[#f7f8fc]"}
           darkbgcolor={"[#23272F]"} */
+
         >
           <AboutMe/>
         </Section>
@@ -53,6 +54,8 @@ export default function Home() {
           title={"PROJECTS"}
           bgcolor={"[#EEEFF2]"}
           darkbgcolor={"[#1A1C21]"}
+         /*  graygradient={true} */
+          /* whitegradient={true} */
         >
           <Projects/>
         </Section>

@@ -69,3 +69,13 @@ body {
   }
 }
  */
+
+
+ /* not using, I added them to tailwind.config.js instead so they are accessible at bg-white-gradient and bg-dark-gradient instead */
+.my-custom-white-gradient-to-bottom {
+  background: linear-gradient(to bottom, #ffffff 0%, #eeeff2 100%);
+}
+
+.my-custom-dark-gradient-to-bottom {
+  background: linear-gradient(to bottom, #23272f 0%, #1a1c21 100%);
+}
