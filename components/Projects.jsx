@@ -158,8 +158,8 @@ function Project({
                 controls
               > 
                 <source src={videoSrc} type="video/mp4" />
-                <source src={videoSrc.replace(".mp4", ".webm")} type="video/webm" />
-                <source src={videoSrc.replace(".mp4", ".ogg")} type="video/ogg" />
+               {/*  <source src={videoSrc.replace(".mp4", ".webm")} type="video/webm" />
+                <source src={videoSrc.replace(".mp4", ".ogg")} type="video/ogg" /> */}
                 Your browser does not support the video tag.
               </video>}
            {imgSrc && <div className="relative">
