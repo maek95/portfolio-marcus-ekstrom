@@ -14,7 +14,7 @@ export default function Hero() {
         <h1 className="text-black dark:text-white text-5xl lg:text-6xl font-extrabold mx-4 ">HI, I'M MARCUS EKSTRÖM</h1>
         <p className="mx-4">Fullstack developer student based in Stockholm</p>
 
-        <div>
+        <div className="flex justify-center mx-4">
           <BlueButton onClick={() => {
             scrollToSection(projectsSectionRef)
           }} title={"PROJECTS"}></BlueButton>

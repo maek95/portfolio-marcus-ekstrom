@@ -153,10 +153,13 @@ function Project({
 
             {videoSrc && <video
                 className="w-full h-[300px] md:h-[400px] lg:h-[500px] lg:w-auto rounded-lg"
-                src={videoSrc}
+                //src={videoSrc} // multiple <source /> for compatibilty, mobile etc.
                 alt="<preview video>"
                 controls
-              />}
+              > 
+                <source src={videoSrc} type="video/webm" />
+                Your browser does not support the video tag.
+              </video>}
            {imgSrc && <div className="relative">
               <img
                 className="w-full h-[200px] md:h-[300px] lg:h-full lg:w-[500px] rounded-lg duration-500 transition-transform"

@@ -19,5 +19,6 @@ export default function BlueButton({ isGitHubLink = false, title, onClick }) {
       </svg>}
       <p className="no-underline">{title}</p>
     </button>
+    
   );
 }
