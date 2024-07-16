@@ -10,7 +10,7 @@ export default function Projects() {
         title={"Price winner LUDI - combining AI with a Movie Database"}
         projectLink={"https://ludi-app.com"}
         imgSrc={"/ludi_mockups_together.png"}
-        transparentImgBg={false}
+        transparentImgBg={true} // have to move cursor further in to zoom
       >
         <Link // hydration error if using <a> ?
           className="text-[#7c7c7c] dark:text-[#959eae]"
@@ -152,18 +152,20 @@ function Project({
             {/* <a className="relative" href={projectLink}> */}
 
             {videoSrc && (<iframe // iframe "recommended" way to include YouTube content on your site... Using YouTube instead of local file, otherwise the bandwidth is too much for mobile browsers...
-              className="w-full h-[300px] md:h-[400px] lg:h-[500px] lg:w-auto lg:min-w-[500px] rounded-lg"
+              className="w-full h-[300px] md:h-[400px] lg:h-[400px] max-w-[450px] lg:max-w-[400px] rounded-lg"
               src="https://www.youtube.com/embed/73QNoHy37KQ"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
+              allowFullScreen
+              
+              >
             </iframe>
             )
             }
            {imgSrc && <div className="relative">
               <img
-                className="w-full h-[200px] md:h-[300px] lg:h-full lg:w-[500px] rounded-lg duration-500 transition-transform"
+                className="w-full h-[200px] md:h-[300px] lg:h-auto lg:w-[450px]  rounded-lg duration-500 transition-transform"
                 src={imgSrc}
                 alt="<preview img>"
                 style={{
