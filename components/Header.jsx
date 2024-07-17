@@ -4,19 +4,86 @@ import { SectionRefContext } from "@/SectionRefContext";
 https://www.npmjs.com/package/hamburger-react
  */
 import Hamburger from "hamburger-react";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ThemeButton from "./ThemeButton";
 
 
 export default function Header({ isHamburgerClicked, setIsHamburgerClicked}) {
 
-  const { projectsSectionRef, aboutMeSectionRef, heroSectionRef, contactSectionRef, scrollToSection } = useContext(SectionRefContext)
+  const { projectsSectionRef, aboutMeSectionRef, heroSectionRef, contactSectionRef, heroTitleRef, scrollToSection } = useContext(SectionRefContext)
 
   console.log(isHamburgerClicked);
 
+  const [isBgOpacityHigh, setIsBgOpacityHigh] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 40) {
+        setIsBgOpacityHigh(false);
+
+      } else {
+
+        setIsBgOpacityHigh(true);
+
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+   /* useEffect(() => {
+    const handleScroll = () => {
+      if (heroTitleRef.current) {
+        const heroTitleTop = heroTitleRef.current.getBoundingClientRect().top + window.scrollY;
+        if (window.scrollY > heroTitleTop - 80) {
+          setIsBgOpacityHigh(true);
+        } else {
+          setIsBgOpacityHigh(false);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);  */
+
+   /* useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsBgOpacityHigh(true);
+
+          } else {
+            setIsBgOpacityHigh(false);
+
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (heroTitleRef.current) {
+      observer.observe(heroTitleRef.current);
+    }
+
+    return () => {
+      if (heroTitleRef.current) {
+        observer.unobserve(heroTitleRef.current);
+      }
+    };
+  }, []); */
+
   // TODO: fix hamburger-menu!
   return (
-    <header className="text-black dark:text-white z-40 sticky h-20 top-0 left-0 right-0 px-4 flex justify-between bg-white dark:bg-[#23272F] opacity-[98%]">
+    <header className={`text-black dark:text-white z-40 sticky h-20 top-0 left-0 right-0 px-4 flex justify-between ${isBgOpacityHigh ? 'bg-white/0' : 'bg-white/95'} ${isBgOpacityHigh ? 'dark:bg-[#23272F]/0' : 'dark:bg-[#23272F]/95'} transition-all duration-500 ease-in-out`}>
       <div className="flex flex-row items-center justify-center gap-4">
         {/*profile picture + name */}
         <div className="flex">

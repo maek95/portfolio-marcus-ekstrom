@@ -197,18 +197,21 @@ function Project({
             </div>}
           </div>
 
-          <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-start gap-4">
-            <h3 className="text-black dark:text-white ">{title}</h3>
+          <div className="w-full flex flex-col items-center lg:items-start  lg:text-start gap-4">
+            <div className="flex w-full text-start">
 
-            <div className="w-full">
+              <h3 className="text-black dark:text-white ">{title}</h3>
+            </div>
+
+            <div className="flex w-full text-start">
               <p className="">{children}</p>
             </div>
             {/* wrapped Link around Button instead of sending a complex onClick function to BlueButton for opening a link... */}
             {isFinished ? (<>
-              {projectLink && <Link className="no-underline" href={projectLink} target="_blank">
+              {projectLink && <Link className="no-underline pt-8" href={projectLink} target="_blank"> {/* with pt-8 you also have to account for gap-4 */}
                 <BlueButton title={"Project Link"} />
               </Link>}
-              {githubLink && <Link className="no-underline " href={githubLink} target="_blank">
+              {githubLink && <Link className="no-underline pt-8" href={githubLink} target="_blank"> {/* with pt-8 you also have to account for gap-4 */}
                 
                 <BlueButton isGitHubLink={true} title={"GitHub Link"} />
               </Link>}

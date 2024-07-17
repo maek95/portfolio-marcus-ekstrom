@@ -42,6 +42,7 @@ export default function Home() {
         <div className="" ref={aboutMeSectionRef}></div> {/* dispatch aboutMeSectionRef ? */}
         <Section
           title="ABOUT ME"
+          /* gradient="blue-white-gradient" */
           /* bgcolor={"[#f7f8fc]"}
           darkbgcolor={"[#23272F]"} */
 

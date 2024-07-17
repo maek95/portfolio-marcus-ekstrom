@@ -23,9 +23,10 @@ export function SectionRefProvider({children}) {
   const aboutMeSectionRef = useRef(null);
   const heroSectionRef = useRef(null);
   const contactSectionRef = useRef(null);
+  const heroTitleRef = useRef(null);
 
   return (
-    <SectionRefContext.Provider value={{projectsSectionRef, aboutMeSectionRef, heroSectionRef, contactSectionRef, scrollToSection}}>
+    <SectionRefContext.Provider value={{projectsSectionRef, aboutMeSectionRef, heroSectionRef, contactSectionRef, heroTitleRef, scrollToSection}}>
       {children}
     </SectionRefContext.Provider>
   )
