@@ -31,7 +31,7 @@ function themeReducer(state, action) {
         }
       }
     };
-    case 'change_fontSize': {
+    case 'change_fontSize': { // not using
       return {...state, 
         userPreferences: {
         ...state.userPreferences,
@@ -39,7 +39,7 @@ function themeReducer(state, action) {
         } 
       }
     }
-    case 'change_reduceAnimations': {
+    case 'change_reduceAnimations': { // not using
       return {...state, 
         userPreferences: {
         ...state.userPreferences,
