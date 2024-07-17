@@ -8,8 +8,8 @@ export default function Hero() {
   const { scrollToSection, projectsSectionRef, heroTitleRef } = useContext(SectionRefContext);
 
   //bg-[#EEEFF2] dark:bg-[#1A1C21]
-  return ( // mt-[-80px] due to Header being 80px
-    <div className="h-lvh mt-[-80px] flex justify-center items-center min-w-full bg-white-gray-gradient dark:bg-dark-gradient" //see tailwind.config.js, I added these custom gradients there!
+  return ( // mt-[-80px] due to Header being 80px... // h-lvh or h-dvh
+    <div className="h-dvh mt-[-80px] flex justify-center items-center min-w-full bg-white-gray-gradient dark:bg-dark-gradient" //see tailwind.config.js, I added these custom gradients there!
     /* style={{
       //background: "linear-gradient(to top, #EEEFF2 0%, #EEEFF2 80%, #FFFFFF 100%)"
        //background: "linear-gradient(to bottom, #23272F 0%, #1A1C21 100%)"
