@@ -1,8 +1,8 @@
-export default function BlueButton({ isGitHubLink = false, title, onClick }) {
+export default function BlueButton({ isGitHubLink = false, title, onClick, smallerSize = false }) {
   return (
     <button
       onClick={onClick}
-      className="flex gap-4 border-none items-center rounded-lg bg-[#347FC1] hover:bg-[#3f97e4] p-4 px-8 text-white font-bold cursor-pointer"
+      className={`flex gap-4 border-none items-center rounded-lg bg-[#347FC1] hover:bg-[#3f97e4] p-4 ${smallerSize ? "px-4" : "px-8"} text-white font-bold cursor-pointer`}
     >
      {isGitHubLink && <svg
         height="16"

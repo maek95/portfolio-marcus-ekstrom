@@ -15,6 +15,23 @@ function Skill({skillName}) {
 
 }
 
+export function SkillSmall({skillName}) {
+
+  /* text-[#23272F] */
+
+ /*  dark:bg-[#868e9d] */
+ 
+ /* dark:text-[#23272F] */
+ 
+  return (
+    <div className="bg-white dark:bg-[#23272F] //dark:bg-[#959eae] rounded-lg  //dark:text-[#1A1C21] px-2 py-1 flex justify-center text-center"> {/* text color changes with default text-color */}
+    {/* <div className="bg-[#EEEFF2] rounded-lg dark:bg-white p-4 flex justify-center text-center text-[#23272F]"> */}
+        {skillName}
+    </div>
+  )
+
+}
+
 export default function Skills() {
   return (
     <div className="flex flex-col gap-4">
@@ -30,6 +47,7 @@ export default function Skills() {
       <Skill skillName={"Express.js"}/>
       <Skill skillName={"AWS"}/>
       <Skill skillName={"Docker"}/>
+      <Skill skillName={"CI/CD"}/>
       <Skill skillName={"JavaScript"}/>
       <Skill skillName={"TypeScript"}/>
       <Skill skillName={"HTML5"}/>
@@ -47,6 +65,7 @@ export default function Skills() {
     <div className="flex flex-wrap gap-4">
       <Skill skillName={"XML"}/>
       <Skill skillName={"Java"}></Skill>
+      <Skill skillName={"Spring Boot"}></Skill>
       <Skill skillName={"C++"}></Skill>
       <Skill skillName={"Android Studio / Kotlin"}></Skill>
       <Skill skillName={"STATA"}></Skill>

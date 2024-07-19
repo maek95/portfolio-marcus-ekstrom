@@ -2,6 +2,7 @@ import Link from "next/link";
 import Card from "./Card";
 /* import ProjectandContactButton from "./ProjectandContactButton"; */
 import BlueButton from "./BlueButton";
+import { SkillSmall } from "./Skills";
 
 export default function Projects() {
   return (
@@ -9,10 +10,12 @@ export default function Projects() {
       <Project
         title={"Price winner LUDI - combining AI with a Movie Database"}
         projectLink={"https://ludi-app.com"}
+        githubLink={"https://github.com/axelcfk/chas-challenge2"}
         imgSrc={"/ludi_mockups_together.png"}
         transparentImgBg={true} // have to move cursor further in to zoom
+        stacks={["Next.js", "Express.js", "MySQL", "AWS", "CI/CD", "Docker", "Tailwind"]}
       >
-        <Link // hydration error if using <a> ?
+        {/* <Link // hydration error if using <a> ?
           className="text-[#7c7c7c] dark:text-[#959eae]"
           href={"https://ludi-app.com"}
           target="_blank"
@@ -20,7 +23,7 @@ export default function Projects() {
           https://ludi-app.com
         </Link>
         <br />
-        <br />
+        <br /> */}
         At Chas Academy we had a 2-month long segment where 13 teams competed
         for the best website that incorporated AI. Here is the{" "}
         <Link // hydration error if using <a> ?
@@ -33,9 +36,9 @@ export default function Projects() {
           university's offical LinkedIn post
         </Link>{" "}
         showing my team winning! It was a very fulfilling experience where I
-        worked with basically all aspects of a website; Frontend (Next.js),
-        Backend (node.js/express.js), Database (MySQL), Deployment (deploy.yml,
-        AWS EC2, Docker), and overall styling using Tailwind/CSS.
+        worked with basically all aspects of a website; Frontend (Next.js App Router),
+        Backend (Node.js/Express.js), Database (MySQL), Deployment (deploy.yml,
+        AWS EC2 & RDS, Docker), and overall styling using Tailwind/CSS.
         <br />
         <br />
         We utilized Scrum and Trello to get a sense of a real workplace, where
@@ -47,30 +50,32 @@ export default function Projects() {
       </Project>
 
       <Project
-        title={"React Native memory game (video showcase)"}
+        title={"Memory Game App"}
         githubLink={"https://github.com/maek95/react-native-memory-game-FULLSTACK"}
         videoSrc={"https://www.youtube.com/shorts/73QNoHy37KQ"}
        // transparentImgBg={true}
+       stacks={["React Native", "Expo Router", "Java", "Spring Boot", "H2"]}
       >
         My first React Native project; the player must remember and replicate the order in which the circle's slices flash purple. The player has five seconds to complete the sequence, and pressing a wrong slice gives a 1 second penalty. If the timer reaches 0 the player loses and they can quickly start over or select a new difficulty.
         <br/>
         <br/>
-        The project utilizes Expo Router and the game itself is built with a SVG (the circle with slices) combined with Animations. 
+        The project utilizes Expo Router for navigation and the game interface is created using SVG for the circle and its slices, combined with various animations. The backend is powered by Java Springboot and keeps track of highscores (stored in H2) for the current session using JPA repository for data persistence.
         <br/>
         <br/>
-        Work in progress: create a backend to efficiently store player data - such as account creation, highscore, and custom difficulties.
+        Work in progress: Further enhance the backend by enabling account creation, login requests, and perhaps custom difficulties.
       </Project>
 
       <Project
         title={"Fullstack Bank Site"}
         projectLink={"http://13.53.190.247:3000"}
+        githubLink={"https://github.com/maek95/workshop-26-docker-bank-mysql-test"}
         imgSrc={"/bank-app-preview3.png"}
         transparentImgBg={true}
+        stacks={["Next.js", "Express.js", "MySQL", "AWS", "CI/CD", "Docker", "Tailwind" ]}
       >
         Built as a full-stack banking website, this project utilizes React with
-        Next.js for the frontend, while Express.js with Node.js and MySQL for
-        the backend. Deployment is managed through Docker, hosted on an AWS
-        Amazon EC2 instance. Moreover, I utilized cookies in order to securely
+        Next.js (App Router) for the frontend, while Express.js with Node.js and MySQL for
+        the backend. Deployment is managed through Docker, hosted on an AWS EC2 instance and an AWS RDS instance (MySQl database). Moreover, I utilized cookies in order to securely
         store session tokens when transitioning between login and account page.
         To streamline the deployment process, a deploy.yml script automatically
         updates the site whenever changes are pushed to GitHub.
@@ -79,8 +84,10 @@ export default function Projects() {
       <Project
         title={"Quiz Site"}
         projectLink={"https://23-chas-quiz.vercel.app"}
+        githubLink={"https://github.com/maek95/23-chas-quiz"}
         imgSrc={"/myQuizAppPreview.png"}
         transparentImgBg={true}
+        stacks={["Next.js", "Redux", "Tailwind"]}
       >
         Fun and engaging group project at Chas Academy where we mainly learned
         how to work as a group in GitHub and solving merge conflicts. We also
@@ -104,6 +111,7 @@ export default function Projects() {
         }
         imgSrc={"/myFigmaAppPreview.png"}
         transparentImgBg={true}
+        stacks={["Figma"]}
       >
         At Chas Academy we had a 1-week segment about Figma and I made a simple
         design! It gave me some insight on how Designers may work with Figma, or
@@ -112,8 +120,10 @@ export default function Projects() {
       <Project
         title={"Replicated Nordea's website"}
         projectLink={"https://workshop-4-form.vercel.app"}
+        githubLink={"https://github.com/maek95/workshop_4_form"}
         imgSrc={"/NordeaPagePreview.png"}
         transparentImgBg={false}
+        stacks={["HTML", "CSS"]}
       >
         A basic HTML & CSS project I made during one of the first workshops at
         Chas Academy. I learned about submitting forms and delving deep into
@@ -146,6 +156,7 @@ function Project({
   transparentImgBg,
   isFinished = true, // Default value is true
   children,
+  stacks,
 }) {
   return (
     <>
@@ -203,19 +214,30 @@ function Project({
               <h3 className="text-black dark:text-white ">{title}</h3>
             </div>
 
+            <div className="flex w-full">
+            
+              <div className="flex flex-wrap gap-4">
+                {stacks && stacks.map((stack) => {
+                  return (
+                    <SkillSmall skillName={stack}/>
+                  )
+                })}
+              </div>
+            </div>
+
             <div className="flex w-full text-start">
               <p className="">{children}</p>
             </div>
             {/* wrapped Link around Button instead of sending a complex onClick function to BlueButton for opening a link... */}
-            {isFinished ? (<>
-              {projectLink && <Link className="no-underline pt-8" href={projectLink} target="_blank"> {/* with pt-8 you also have to account for gap-4 */}
-                <BlueButton title={"Project Link"} />
+            {isFinished ? (<div className="flex w-full gap-4">
+              {projectLink && <Link className="no-underline" href={projectLink} target="_blank"> {/* with pt-8 you also have to account for gap-4, so it's basically pt-12 */}
+                <BlueButton smallerSize={true} title={"Project Link"} />
               </Link>}
-              {githubLink && <Link className="no-underline pt-8" href={githubLink} target="_blank"> {/* with pt-8 you also have to account for gap-4 */}
+              {githubLink && <Link className="no-underline" href={githubLink} target="_blank"> 
                 
-                <BlueButton isGitHubLink={true} title={"GitHub Link"} />
+                <BlueButton  smallerSize={true} isGitHubLink={true} title={"GitHub Link"} />
               </Link>}
-              </>
+              </div>
             ) : (
               ""
             )}
