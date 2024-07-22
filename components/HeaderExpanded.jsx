@@ -1,10 +1,23 @@
+"use client"
 import { SectionRefContext } from "@/SectionRefContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 
 export default function HeaderExpanded({isHamburgerClicked, setIsHamburgerClicked}) {
 
   const { scrollToSection, heroSectionRef, projectsSectionRef, aboutMeSectionRef, contactSectionRef } = useContext(SectionRefContext);
+
+  // disable scrolling when the HeaderExpanded is open, otherwise you can scroll on the page while its open... weird
+  useEffect(() => {
+    if (isHamburgerClicked) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isHamburgerClicked]);
 
   return (
     <>

@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
         <SectionRefProvider>
           <PreventZoom></PreventZoom> {/* prevent zoom on mobile */}
           <ThemeState></ThemeState> {/* see main.jsx, runs an useEffect to add "darkmode" with tailwind */}
-          <body className="font-sourceSans bg-[#FFFFFF] dark:bg-[#23272F]"> {/* affects the color you see at the top of the page on mobile */}
+          <body className="font-sourceSans bg-[#FFFFFF] dark:bg-[#23272F]"> {/* affects whole page, including the color you see at the top of the page on mobile */}
             {children}
             <Analytics/>
           </body>

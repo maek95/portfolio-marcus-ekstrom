@@ -82,8 +82,10 @@ export default function Header({ isHamburgerClicked, setIsHamburgerClicked}) {
   }, []); */
 
   // TODO: fix hamburger-menu!
+
+  // ${isHamburgerClicked ? "sticky" : "fixed"}   because 'fixed' places Header behind the HeaderExpanded, whilst 'sticky' places Header above it. However, i dont always want 'sticky' because it pushes everything down!
   return (
-    <header className={`text-black dark:text-white z-40 sticky h-20 top-0 left-0 right-0 px-4 flex justify-between ${isBgOpacityHigh ? 'bg-white/0' : 'bg-white/95'} ${isBgOpacityHigh ? 'dark:bg-[#23272F]/0' : 'dark:bg-[#23272F]/95'} transition-all duration-500 ease-in-out`}>
+    <header className={`text-black dark:text-white z-40 ${isHamburgerClicked ? "sticky" : "fixed"}  h-20 top-0 left-0 right-0 px-4 flex justify-between ${isBgOpacityHigh ? 'bg-white/0' : 'bg-white/95'} ${isBgOpacityHigh ? 'dark:bg-[#23272F]/0' : 'dark:bg-[#23272F]/95'} transition-all duration-500 ease-in-out`}>
       <div className="flex flex-row items-center justify-center gap-4">
         {/*profile picture + name */}
         <div className="flex">

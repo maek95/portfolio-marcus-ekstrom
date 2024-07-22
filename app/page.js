@@ -22,14 +22,11 @@ export default function Home() {
 
   const [isHamburgerClicked, setIsHamburgerClicked] = useState(false)
 
-  // TODO: NEWS SITE PROJECT + PREVIEWIMAGE
   // TODO: @media transform duration on projectpreview images resizing from mobile to desktop? transform transition height & width?
-  // TODO: remove color transition duration on hamburger button when we swap dark/light mode? since nothing else does that
   // TODO: weird background flicker when clicking on hamburger button on mobile.
-  // TODO: maybe make the gap a little smaller between e.g. Quiz App and the previewImage?
 
   return (
-    <div className="text-[#7c7c7c] dark:text-[#959eae] bg-[#EEEFF2] dark:bg-[#1A1C21] min-h-screen">
+    <div className="text-[#7c7c7c] dark:text-[#959eae] bg-white dark:bg-[#23272F] min-h-screen">
       <ScrollToTopButton></ScrollToTopButton>
       
       <Header setIsHamburgerClicked={setIsHamburgerClicked} isHamburgerClicked={isHamburgerClicked}></Header>
