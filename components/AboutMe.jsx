@@ -14,6 +14,17 @@ export default function AboutMe() {
         <div className="">
           <p className="">
             I live in Stockholm and I am currently enrolled at Chas Academy (university), studying{" "}
+           <strong>Fullstack development - specialising in Frontend</strong>. 
+           <br />
+           <br />
+            I began my coding journey after completing a <strong>Masters in Economics</strong> at Stockholm University in the summer of 2022. Following this, I took three individual university-courses in programming: C++, Java, and Android Studio (Kotlin), which all fascinated me and led me to pursue a Fullstack/Frontend program at Chas Academy in 2023!
+            <br />
+            <br />
+            In Frontend I have worked with everything from basic CSS & HTML to
+            JavaScript, React.js, Next.js, and React Native. On the Backend I have
+            experience with Express.js (Node) and MySQL, and combined it with
+            Frontend development for fullstack projects. The projects I showcase below are deployed through Vercel, while others use CI/CD for automatic deployment to Amazon AWS EC2/RDS instances with Docker.{" "}
+           {/*  I live in Stockholm and I am currently enrolled at Chas Academy (university), studying{" "}
             <strong>Fullstack development with a focus on Frontend</strong>. In
             Frontend I have worked with everything from basic CSS & HTML to
             JavaScript, React.js, Next.js, and React Native. In backend I have
@@ -27,7 +38,7 @@ export default function AboutMe() {
             my Master Thesis involved analyzing large datasets using Vector
             Autoregression (VAR) and MATLAB. Following my masters I also took
             individual university-courses in C++, Java, and Kotlin, before
-            investing wholeheartedly into fullstack/frontend developing!{" "}
+            investing wholeheartedly into fullstack/frontend developing!{" "} */}
           </p>
         </div>
         {/*  <a href="#projects"> */}
