@@ -6,7 +6,7 @@ export default function BlueButton({ isGitHubLink = false, title, onClick, small
 
     <button
       onClick={onClick}
-      className={`flex flex-col gap-2 border-none items-center justify-center rounded-lg bg-[#347FC1] hover:bg-[#3f97e4] py-2 px-4 ${smallerSize ? "py-2 px-4 text-sm" : "py-4 px-12 text-xl"} text-white font-sourceSans cursor-pointer`}
+      className={`flex flex-col gap-2 border-none items-center justify-center rounded-lg bg-[#347FC1] hover:bg-[#3f97e4] ${smallerSize ? "py-2 px-4 text-sm" : "py-4 px-12 text-xl"} text-white font-sourceSans cursor-pointer`}
     >
       <div className="flex items-center gap-4">
      {isGitHubLink && <svg
