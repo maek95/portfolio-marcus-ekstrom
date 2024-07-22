@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="flex justify-center mx-4 ">
           <BlueButton arrowDown={true} onClick={() => {
             scrollToSection(projectsSectionRef)
-          }} title={"PROJECTS"}></BlueButton>
+          }} title={"Projects"}></BlueButton>
           {/* <ProjectandContactButton onClick={scrollToAboutSection} title={"ABOUT ME"}></ProjectandContactButton> */}
         </div>
       </div>

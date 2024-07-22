@@ -32,7 +32,7 @@ export default function AboutMe() {
         </div>
         {/*  <a href="#projects"> */}
         <BlueButton arrowDown={true}
-          title={"CONTACT"}
+          title={"Contact Me"}
           onClick={() => {
             scrollToSection(contactSectionRef);
           }}
