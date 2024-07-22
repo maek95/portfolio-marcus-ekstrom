@@ -3,9 +3,22 @@ import { useContext } from "react";
 import BlueButton from "./BlueButton";
 import { SectionRefContext } from "@/SectionRefContext";
 
-export default function Hero({isHeroInView}) {
+export default function Hero() {
 
-  const { scrollToSection, projectsSectionRef, heroTitleRef } = useContext(SectionRefContext);
+  const { scrollToSection, projectsSectionRef, heroTitleRef, isHeroInView } = useContext(SectionRefContext); // setHeightDifference
+
+  console.log("isHeroInView", isHeroInView);
+
+/* 
+  useEffect(() => {
+    if (heroRef.current) {
+      const originalHeight = heroRef.current.offsetHeight;
+      heroRef.current.classList.add("h-dvh");
+      const newHeight = heroRef.current.offsetHeight;
+      heroRef.current.classList.remove("h-dvh");
+      setHeightDifference(newHeight - originalHeight);
+    }
+  }, [setHeightDifference]); */
 
   //bg-[#EEEFF2] dark:bg-[#1A1C21]
   return ( //(removed) mt-[-80px] due to Header being 80px... // h-dvh with for dynamic view when e.g mobile browser footer or header impacts the screen size. Makes stuff jump around though - maybe test transition-all duration-500 ease-in-out

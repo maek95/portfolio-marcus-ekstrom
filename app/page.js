@@ -25,33 +25,7 @@ export default function Home() {
   } = useContext(SectionRefContext);
 
   const [isHamburgerClicked, setIsHamburgerClicked] = useState(false);
-
-  const [isHeroInView, setIsHeroInView] = useState(true);
-
-  // isHeroInView is used in <Hero> as a terniary for h-dvh and h-lvh, so that when Hero section is NOT in view it has h-lvh. This is because h-dvh causes the <Hero> to resize when stuff is added to the screen (like on mobile you get a search-field when you scroll up). We do not want this resize to occur when we are scrolling through the website, but it shall occur when we are viewing the Hero section!
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.target === heroSectionRef.current) {
-            setIsHeroInView(entry.isIntersecting);
-          }
-        });
-      },
-      { threshold: 0.5 } // adjust?
-    );
-
-    if (heroSectionRef.current) {
-      observer.observe(heroSectionRef.current);
-    }
-
-    return () => {
-      if (heroSectionRef.current) {
-        observer.unobserve(heroSectionRef.current);
-      }
-    };
-  }, [heroSectionRef]);
-
+  
   // TODO: @media transform duration on projectpreview images resizing from mobile to desktop? transform transition height & width?
   // TODO: weird background flicker when clicking on hamburger button on mobile.
 
@@ -69,7 +43,7 @@ export default function Home() {
       ></HeaderExpanded>
 
       <div className="" ref={heroSectionRef}></div>
-      <Hero isHeroInView={isHeroInView}></Hero>
+      <Hero></Hero>
 
       <main className={`bg-white dark:bg-[#23272F]`}>
         <div className="" ref={aboutMeSectionRef}></div>{" "}
