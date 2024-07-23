@@ -51,7 +51,7 @@ export default function Projects() {
 
       <Project
         title={"Memory Game App"}
-        githubLink={"https://github.com/maek95/react-native-memory-game-FULLSTACK"}
+        githubLink={"https://github.com/maek95/react-native-memory-game-Java-SpringBoot"}
         videoSrc={"https://www.youtube.com/shorts/73QNoHy37KQ"}
        // transparentImgBg={true}
        stacks={["React Native", "Expo Router", "Java", "Spring Boot", "H2"]}
