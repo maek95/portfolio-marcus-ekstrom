@@ -203,7 +203,7 @@ function Project({
             }
            {imgSrc && <div className="relative">
               <img
-                className="w-full max-h-[200px] md:h-[300px] lg:h-auto lg:w-[450px]  rounded-lg duration-500 transition-transform"
+                className="w-full max-h-[200px] md:max-h-[300px] lg:h-auto lg:w-[450px] lg:max-h-none  rounded-lg duration-500 transition-transform"
                 src={imgSrc}
                 alt="<preview img>"
                 style={{
