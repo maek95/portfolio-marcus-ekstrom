@@ -104,6 +104,30 @@ export default function Projects() {
         A simple news site where I refined my skills in fetching articles from a news API on server-side and storing bookmarks using Context. Also, as a workaround to this free API having very limited fetches, I utilized cache to only fetch articles when necessary.
       </Project>
  */}
+      
+      <Project 
+        title={"Replicated and scaled down Zoom's website"}
+        projectLink={"https://workshop-12-tailwind-redesignzoom.vercel.app"}
+        imgSrc={"/zoom-redesign-mockup-completed.png"}
+        transparentImgBg={true}
+        stacks={["Vite", "Tailwind"]}
+      >
+        My first project using Tailwind, built with Vite, where I tried to replicate and scale down a part of Zoom's original website{" "}<Link
+         className="text-[#7c7c7c] dark:text-[#959eae]"
+         href={
+          "https://zoom.us"
+        }
+        target="_blank"
+         >
+        https://zoom.us
+        </Link>
+        .
+        <br/>
+        <br/>
+        This project was very fulfilling as Zoom's website displays a lot of information and is quite content-rich. I had to carefully analyze what to keep and what to remove, and also add my own design elements.
+
+      </Project>
+
       <Project
         title={"Figma Design"}
         projectLink={
@@ -179,7 +203,7 @@ function Project({
             }
            {imgSrc && <div className="relative">
               <img
-                className="w-full h-[200px] md:h-[300px] lg:h-auto lg:w-[450px]  rounded-lg duration-500 transition-transform"
+                className="w-full max-h-[200px] md:h-[300px] lg:h-auto lg:w-[450px]  rounded-lg duration-500 transition-transform"
                 src={imgSrc}
                 alt="<preview img>"
                 style={{
