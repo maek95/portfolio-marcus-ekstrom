@@ -108,6 +108,7 @@ export default function Projects() {
       <Project 
         title={"Replicated and scaled down Zoom's website"}
         projectLink={"https://workshop-12-tailwind-redesignzoom.vercel.app"}
+        githubLink={"https://github.com/maek95/workshop_12_tailwind_redesignzoom"}
         imgSrc={"/zoom-redesign-mockup-completed.png"}
         transparentImgBg={true}
         stacks={["Vite", "Tailwind"]}
