@@ -52,7 +52,8 @@ export default function Projects() {
       <Project
         title={"Memory Game App"}
         githubLink={"https://github.com/maek95/react-native-memory-game-Java-SpringBoot"}
-        videoSrc={"https://www.youtube.com/watch?v=TvAyfyCwELM"}
+        videoSrc={"https://www.youtube.com/embed/TvAyfyCwELM"}
+        // https://www.youtube.com/watch?v=TvAyfyCwELM // needs to embed version!
        // transparentImgBg={true}
        stacks={["React Native", "Expo Router", "Java", "Spring Boot", "H2"]}
       >
@@ -191,8 +192,9 @@ function Project({
             {/* <a className="relative" href={projectLink}> */}
 
             {videoSrc && (<iframe // iframe "recommended" way to include YouTube content on your site... Using YouTube instead of local file, otherwise the bandwidth is too much for mobile browsers...
+              key={videoSrc} // force re-render if videoSrc changes live... i.e. when not rebuilding the project...?
               className="w-full h-[300px] md:h-[400px] lg:h-[400px] max-w-[450px] lg:max-w-[400px] rounded-lg"
-              src="https://www.youtube.com/embed/73QNoHy37KQ"
+              src={videoSrc}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
