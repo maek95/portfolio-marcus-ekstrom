@@ -60,10 +60,12 @@ export default function Projects() {
         My first React Native project; the player must remember and replicate the order in which the circle's slices flash purple. The player has five seconds to complete the sequence, and pressing a wrong slice gives a 1 second penalty. If the timer reaches 0 the player loses and they can quickly start over or select a new difficulty.
         <br/>
         <br/>
-        The project utilizes Expo Router for navigation and the game interface is created using SVG for the circle and its slices, combined with various animations. The backend is powered by Java Springboot and keeps track of highscores (stored in H2) for the current session using JPA repository for data persistence.
+        The project utilizes Expo Router for navigation and the game interface is created using SVG for the circle and its slices, combined with various animations. The backend is powered by Java Springboot and allows the user to create an account to keep track of highscores (stored in H2) for the current session using JPA repository for data persistence.
         <br/>
         <br/>
-        Work in progress: Further enhance the backend by enabling account creation, login requests, and perhaps custom difficulties.
+        Work in progress: 
+        <br/>
+        Add a character that runs where the user clicks (at a certain speed), this will add a new element to the game and potentially make it more challenging.  
       </Project>
 
       <Project
