@@ -51,13 +51,13 @@ export default function Projects() {
 
       <Project
         title={"Memory Game App"}
-        githubLink={"https://github.com/maek95/react-native-memory-game-Java-SpringBoot"}
-        videoSrc={"https://www.youtube.com/embed/TvAyfyCwELM"}
-        // https://www.youtube.com/watch?v=TvAyfyCwELM // needs to embed version!
+        githubLink={"https://github.com/maek95/react-native-memory-game-Java-SpringBoot-animated-character"}
+        videoSrc={"https://www.youtube.com/embed/ytSaP49ej9U"}
+        // https://www.youtube.com/watch?v=ytSaP49ej9U // needs to embed version!
        // transparentImgBg={true}
-       stacks={["React Native", "Expo Router", "Java", "Spring Boot", "H2"]}
+       stacks={["React Native", "Expo Router", "Java", "Spring Boot", "JPA"]}
       >
-        My first React Native project; the player must remember and replicate the order in which the circle's slices flash purple. The player has five seconds to complete the sequence, and pressing a wrong slice gives a 1 second penalty. If the timer reaches 0 the player loses and they can quickly start over or select a new difficulty.
+        My first React Native project; the player must remember and replicate the order in which the circle's slices flash purple. The player has five seconds to complete the sequence, where they click to move a character around to respective slice in the correct order. If the character lands on a wrong slice it gives a 1 second penalty, and if the timer reaches 0 they lose and can quickly start over or select a new difficulty.
         <br/>
         <br/>
         The project utilizes Expo Router for navigation and the game interface is created using SVG for the circle and its slices, combined with various animations. The backend is powered by Java Springboot and allows the user to create an account to keep track of highscores (stored in H2) for the current session using JPA repository for data persistence.
@@ -65,7 +65,7 @@ export default function Projects() {
         <br/>
         Work in progress: 
         <br/>
-        Add a character that runs where the user clicks (at a certain speed), this will add a new element to the game and potentially make it more challenging.  
+        Store more statistics of the user's games that they can acces on their profile page, such as how many games they have played and their win/loss ratio.
       </Project>
 
       <Project
