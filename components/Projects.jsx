@@ -65,7 +65,7 @@ export default function Projects() {
         <br/>
         Work in progress: 
         <br/>
-        Store more statistics of the user's games that they can acces on their profile page, such as how many games they have played and their win/loss ratio.
+        Store more statistics of the user's games that they can access on their profile page, such as how many games they have played and their win/loss ratio.
       </Project>
 
       <Project
