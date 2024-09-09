@@ -1,8 +1,17 @@
+"use client";
 import Link from "next/link";
 import Card from "./Card";
 /* import ProjectandContactButton from "./ProjectandContactButton"; */
 import BlueButton from "./BlueButton";
 import { SkillSmall } from "./Skills";
+import {
+  FaArrowCircleDown,
+  FaArrowDown,
+  FaChevronDown,
+  FaLongArrowAltDown,
+} from "react-icons/fa";
+import { useLayoutEffect, useRef, useState } from "react";
+import Measure from "react-measure";
 
 export default function Projects() {
   return (
@@ -13,7 +22,15 @@ export default function Projects() {
         githubLink={"https://github.com/axelcfk/chas-challenge2"}
         imgSrc={"/ludi_mockups_together.png"}
         transparentImgBg={true} // have to move cursor further in to zoom
-        stacks={["Next.js", "Express.js", "MySQL", "AWS", "CI/CD", "Docker", "Tailwind"]}
+        stacks={[
+          "Next.js",
+          "Express.js",
+          "MySQL",
+          "AWS",
+          "CI/CD",
+          "Docker",
+          "Tailwind",
+        ]}
       >
         {/* <Link // hydration error if using <a> ?
           className="text-[#7c7c7c] dark:text-[#959eae]"
@@ -36,9 +53,10 @@ export default function Projects() {
           university's offical LinkedIn post
         </Link>{" "}
         showing my team winning! It was a very fulfilling experience where I
-        worked with basically all aspects of a website; Frontend (Next.js App Router),
-        Backend (Node.js/Express.js), Database (MySQL), Deployment (deploy.yml,
-        AWS EC2 & RDS, Docker), and overall styling using Tailwind/CSS.
+        worked with basically all aspects of a website; Frontend (Next.js App
+        Router), Backend (Node.js/Express.js), Database (MySQL), Deployment
+        (deploy.yml, AWS EC2 & RDS, Docker), and overall styling using
+        Tailwind/CSS.
         <br />
         <br />
         We utilized Scrum and Trello to get a sense of a real workplace, where
@@ -51,37 +69,62 @@ export default function Projects() {
 
       <Project
         title={"Memory Game App"}
-        githubLink={"https://github.com/maek95/react-native-memory-game-Java-SpringBoot-animated-character"}
+        githubLink={
+          "https://github.com/maek95/react-native-memory-game-Java-SpringBoot-animated-character"
+        }
         videoSrc={"https://www.youtube.com/embed/ytSaP49ej9U"}
         // https://www.youtube.com/watch?v=ytSaP49ej9U // needs to embed version!
-       // transparentImgBg={true}
-       stacks={["React Native", "Expo Router", "Java", "Spring Boot", "JPA"]}
+        // transparentImgBg={true}
+        stacks={["React Native", "Expo Router", "Java", "Spring Boot", "JPA"]}
       >
-        My first React Native project; the player must remember and replicate the order in which the circle's slices flash purple. The player has five seconds to complete the sequence, where they click to move a character around to respective slice in the correct order. If the character lands on a wrong slice it gives a 1 second penalty, and if the timer reaches 0 they lose and can quickly start over or select a new difficulty.
-        <br/>
-        <br/>
-        The project utilizes Expo Router for navigation and the game interface is created using SVG for the circle and its slices, combined with various animations. The backend is powered by Java Springboot and allows the user to create an account to keep track of highscores (stored in H2) for the current session using JPA repository for data persistence.
-        <br/>
-        <br/>
-        Work in progress: 
-        <br/>
-        Store more statistics of the user's games that they can access on their profile page, such as how many games they have played and their win/loss ratio.
+        My first React Native project; the player must remember and replicate
+        the order in which the circle's slices flash purple. The player has five
+        seconds to complete the sequence, where they click to move a character
+        around to respective slice in the correct order. If the character lands
+        on a wrong slice it gives a 1 second penalty, and if the timer reaches 0
+        they lose and can quickly start over or select a new difficulty.
+        <br />
+        <br />
+        The project utilizes Expo Router for navigation and the game interface
+        is created using SVG for the circle and its slices, combined with
+        various animations. The backend is powered by Java Springboot and allows
+        the user to create an account to keep track of highscores (stored in H2)
+        for the current session using JPA repository for data persistence.
+        <br />
+        <br />
+        Work in progress:
+        <br />
+        Store more statistics of the user's games that they can access on their
+        profile page, such as how many games they have played and their win/loss
+        ratio.
       </Project>
 
       <Project
         title={"Fullstack Bank Site"}
         projectLink={"http://13.53.190.247:3000"}
-        githubLink={"https://github.com/maek95/workshop-26-docker-bank-mysql-test"}
+        githubLink={
+          "https://github.com/maek95/workshop-26-docker-bank-mysql-test"
+        }
         imgSrc={"/bank-app-preview3.png"}
         transparentImgBg={true}
-        stacks={["Next.js", "Express.js", "MySQL", "AWS", "CI/CD", "Docker", "Tailwind" ]}
+        stacks={[
+          "Next.js",
+          "Express.js",
+          "MySQL",
+          "AWS",
+          "CI/CD",
+          "Docker",
+          "Tailwind",
+        ]}
       >
         Built as a full-stack banking website, this project utilizes React with
-        Next.js (App Router) for the frontend, while Express.js with Node.js and MySQL for
-        the backend. Deployment is managed through Docker, hosted on an AWS EC2 instance and an AWS RDS instance (MySQl database). Moreover, I utilized cookies in order to securely
-        store session tokens when transitioning between login and account page.
-        To streamline the deployment process, a deploy.yml script automatically
-        updates the site whenever changes are pushed to GitHub.
+        Next.js (App Router) for the frontend, while Express.js with Node.js and
+        MySQL for the backend. Deployment is managed through Docker, hosted on
+        an AWS EC2 instance and an AWS RDS instance (MySQl database). Moreover,
+        I utilized cookies in order to securely store session tokens when
+        transitioning between login and account page. To streamline the
+        deployment process, a deploy.yml script automatically updates the site
+        whenever changes are pushed to GitHub.
       </Project>
 
       <Project
@@ -107,29 +150,32 @@ export default function Projects() {
         A simple news site where I refined my skills in fetching articles from a news API on server-side and storing bookmarks using Context. Also, as a workaround to this free API having very limited fetches, I utilized cache to only fetch articles when necessary.
       </Project>
  */}
-      
-      <Project 
+
+      <Project
         title={"Replicated and scaled down Zoom's website"}
         projectLink={"https://workshop-12-tailwind-redesignzoom.vercel.app"}
-        githubLink={"https://github.com/maek95/workshop_12_tailwind_redesignzoom"}
+        githubLink={
+          "https://github.com/maek95/workshop_12_tailwind_redesignzoom"
+        }
         imgSrc={"/zoom-redesign-mockup-completed.png"}
         transparentImgBg={true}
         stacks={["Vite", "Tailwind"]}
       >
-        My first project using Tailwind, built with Vite, where I tried to replicate and scale down a part of Zoom's original website{" "}<Link
-         className="text-[#7c7c7c] dark:text-[#959eae]"
-         href={
-          "https://zoom.us"
-        }
-        target="_blank"
-         >
-        https://zoom.us
+        My first project using Tailwind, built with Vite, where I tried to
+        replicate and scale down a part of Zoom's original website{" "}
+        <Link
+          className="text-[#7c7c7c] dark:text-[#959eae]"
+          href={"https://zoom.us"}
+          target="_blank"
+        >
+          https://zoom.us
         </Link>
         .
-        <br/>
-        <br/>
-        This project was very fulfilling as Zoom's website displays a lot of information and is quite content-rich. I had to carefully analyze what to keep and what to remove, and also add my own design elements.
-
+        <br />
+        <br />
+        This project was very fulfilling as Zoom's website displays a lot of
+        information and is quite content-rich. I had to carefully analyze what
+        to keep and what to remove, and also add my own design elements.
       </Project>
 
       <Project
@@ -166,9 +212,11 @@ export default function Projects() {
           Nordea's feedback page
         </Link>
         .
-        <br/>
-        <br/>
-        <strong>Note:</strong> To view the page (Project Link below) <strong>you may have to refresh the page once when entering</strong>, due to the nature of being a raw HTML page.
+        <br />
+        <br />
+        <strong>Note:</strong> To view the page (Project Link below){" "}
+        <strong>you may have to refresh the page once when entering</strong>,
+        due to the nature of being a raw HTML page.
       </Project>
     </div>
   );
@@ -186,6 +234,20 @@ function Project({
   children,
   stacks,
 }) {
+  const contentRef = useRef(null);
+  const [isOverflowing, setIsOverflowing] = useState(false);
+  const [showFullDescription, setShowFullDescription] = useState(false);
+
+  useLayoutEffect(() => {
+    if (contentRef.current) {
+      const contentHeight = contentRef.current.offsetHeight;
+      // Check if content height exceeds 150px
+      if (contentHeight > 199 && contentHeight < 201) { // less than 201 so it isnt applied when we extend the div...
+        setIsOverflowing(true);
+      }
+    }
+  }, [children]);
+
   return (
     <>
       <Card>
@@ -193,79 +255,108 @@ function Project({
           <div className="flex w-full justify-center">
             {/* <a className="relative" href={projectLink}> */}
 
-            {videoSrc && (<iframe // iframe "recommended" way to include YouTube content on your site... Using YouTube instead of local file, otherwise the bandwidth is too much for mobile browsers...
-              key={videoSrc} // force re-render if videoSrc changes live... i.e. when not rebuilding the project...?
-              className="w-full h-[300px] md:h-[400px] lg:h-[400px] max-w-[450px] lg:max-w-[400px] rounded-lg"
-              src={videoSrc}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              
-              >
-            </iframe>
-            )
-            }
-           {imgSrc && <div className="relative">
-              <img
-                className="w-full max-h-[200px] md:max-h-[300px] lg:h-auto lg:w-[450px] lg:max-h-none  rounded-lg duration-500 transition-transform"
-                src={imgSrc}
-                alt="<preview img>"
-                style={{
-                  transition: "transform 0.5s",
-                  margin: "0",
-                }}
-              />
+            {videoSrc && (
+              <iframe // iframe "recommended" way to include YouTube content on your site... Using YouTube instead of local file, otherwise the bandwidth is too much for mobile browsers...
+                key={videoSrc} // force re-render if videoSrc changes live... i.e. when not rebuilding the project...?
+                className="w-full h-[300px] md:h-[400px] lg:h-[400px] max-w-[450px] lg:max-w-[400px] rounded-lg"
+                src={videoSrc}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            )}
+            {imgSrc && (
+              <div className="relative">
+                <img
+                  className="w-full max-h-[200px] md:max-h-[300px] lg:h-auto lg:w-[450px] lg:max-h-none  rounded-lg duration-500 transition-transform"
+                  src={imgSrc}
+                  alt="<preview img>"
+                  style={{
+                    transition: "transform 0.5s",
+                    margin: "0",
+                  }}
+                />
 
-              {/* invisible div that covers the img above... hover over it and it scales the img to 110% size. I did this instead of having the hover-feature directly on the image because now I can trigger the zoom when hovering further into a picture if I want (see inset-[18%]). */}
-              <div
-                className={`z-1 absolute ${
-                  transparentImgBg ? "inset-[18%]" : "inset-[0]"
-                } rounded-lg hover:scale-110 duration-500 transition-transform cursor-pointer`}
-                style={{ pointerEvents: "auto" }}
-                onMouseOver={(e) =>
-                  (e.currentTarget.previousSibling.style.transform =
-                    "scale(1.1)")
-                }
-                onMouseOut={(e) =>
-                  (e.currentTarget.previousSibling.style.transform = "scale(1)")
-                }
-                onClick={() => {
-                  window.open(projectLink, "_blank");
-                }}
-              ></div>
-            </div>}
+                {/* invisible div that covers the img above... hover over it and it scales the img to 110% size. I did this instead of having the hover-feature directly on the image because now I can trigger the zoom when hovering further into a picture if I want (see inset-[18%]). */}
+                <div
+                  className={`z-1 absolute ${
+                    transparentImgBg ? "inset-[18%]" : "inset-[0]"
+                  } rounded-lg hover:scale-110 duration-500 transition-transform cursor-pointer`}
+                  style={{ pointerEvents: "auto" }}
+                  onMouseOver={(e) =>
+                    (e.currentTarget.previousSibling.style.transform =
+                      "scale(1.1)")
+                  }
+                  onMouseOut={(e) =>
+                    (e.currentTarget.previousSibling.style.transform =
+                      "scale(1)")
+                  }
+                  onClick={() => {
+                    window.open(projectLink, "_blank");
+                  }}
+                ></div>
+              </div>
+            )}
           </div>
 
           <div className="w-full flex flex-col items-center lg:items-start  lg:text-start gap-4">
             <div className="flex w-full text-start">
-
               <h3 className="text-black dark:text-white ">{title}</h3>
             </div>
 
             <div className="flex w-full">
-            
               <div className="flex flex-wrap gap-4">
-                {stacks && stacks.map((stack, index) => { // index is automatically generated by React, to keep track of the rendered items...
-                  return (
-                    <SkillSmall key={index} skillName={stack}/>
-                  )
-                })}
+                {stacks &&
+                  stacks.map((stack, index) => {
+                    // index is automatically generated by React, to keep track of the rendered items...
+                    return <SkillSmall key={index} skillName={stack} />;
+                  })}
               </div>
             </div>
 
-            <div className="flex w-full text-start">
-              <p className="">{children}</p>
+            <div onClick={() => {
+                setShowFullDescription(!showFullDescription)
+              }} className={`flex w-full text-start relative ${isOverflowing && !showFullDescription && "fade-bottom"}`}
+            >
+              {/* <p className=""> {typeof children === 'string' ? children.slice(0, 50) : children}</p> */}
+              <div ref={contentRef} className={`${showFullDescription ? "" : "max-h-[200px] overflow-hidden"}`}>
+                <p className="">{children}</p>
+              </div>
+              {isOverflowing && !showFullDescription && (
+                <>
+                  <FaChevronDown className="text-3xl absolute -bottom-1 left-0 right-0 p-4 w-32 justify-self-center" />
+                </>
+              )}
             </div>
+
             {/* wrapped Link around Button instead of sending a complex onClick function to BlueButton for opening a link... */}
-            {isFinished ? (<div className="flex w-full gap-4">
-              {projectLink && <Link className="no-underline" href={projectLink} target="_blank"> {/* with pt-8 you also have to account for gap-4, so it's basically pt-12 */}
-                <BlueButton smallerSize={true} title={"Project Link"} />
-              </Link>}
-              {githubLink && <Link className="no-underline" href={githubLink} target="_blank"> 
-                
-                <BlueButton  smallerSize={true} isGitHubLink={true} title={"GitHub Link"} />
-              </Link>}
+            {isFinished ? (
+              <div className="flex w-full gap-4">
+                {projectLink && (
+                  <Link
+                    className="no-underline"
+                    href={projectLink}
+                    target="_blank"
+                  >
+                    {" "}
+                    {/* with pt-8 you also have to account for gap-4, so it's basically pt-12 */}
+                    <BlueButton smallerSize={true} title={"Project Link"} />
+                  </Link>
+                )}
+                {githubLink && (
+                  <Link
+                    className="no-underline"
+                    href={githubLink}
+                    target="_blank"
+                  >
+                    <BlueButton
+                      smallerSize={true}
+                      isGitHubLink={true}
+                      title={"GitHub Link"}
+                    />
+                  </Link>
+                )}
               </div>
             ) : (
               ""

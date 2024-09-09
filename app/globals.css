@@ -38,38 +38,6 @@ h4 {
   border-radius: 5px;
 }
 
-
-/* :root {
-  --foreground-rgb: 0, 0, 0;
- 
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
- */
-
-
  /* not using, I added them to tailwind.config.js instead so they are accessible at bg-white-gradient and bg-dark-gradient instead */
 .my-custom-white-gradient-to-bottom {
   background: linear-gradient(to bottom, #ffffff 0%, #eeeff2 100%);
@@ -77,4 +45,19 @@ body {
 
 .my-custom-dark-gradient-to-bottom {
   background: linear-gradient(to bottom, #23272f 0%, #1a1c21 100%);
+}
+
+.fade-bottom {
+  position: relative;
+}
+
+.fade-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%; /* This represents the bottom 20% of the div */
+  background: linear-gradient(to top, #EEEFF2, transparent); /* Adjust the color to match your background */
+  pointer-events: none; /* Allows interaction with elements behind it */
 }
