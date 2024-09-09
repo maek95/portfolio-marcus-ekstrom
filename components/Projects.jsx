@@ -324,9 +324,9 @@ function Project({
                 <p className="">{children}</p>
               </div>
               {isOverflowing && !showFullDescription && (
-                <>
-                  <FaChevronDown className="text-3xl absolute -bottom-1 left-0 right-0 p-4 w-32 justify-self-center" />
-                </>
+                <div className="absolute -bottom-1 w-full flex">
+                  <FaChevronDown className="text-3xl p-4 w-32 mx-auto" />
+                </div>
               )}
             </div>
 
