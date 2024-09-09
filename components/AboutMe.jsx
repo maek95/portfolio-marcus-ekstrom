@@ -20,10 +20,9 @@ export default function AboutMe() {
             I began my coding journey after completing a <strong>Masters in Economics</strong> at Stockholm University in the summer of 2022. Following this, I took three individual university-courses in programming: C++, Java, and Android Studio (Kotlin), which all fascinated me and led me to pursue a Fullstack/Frontend program at Chas Academy in 2023!
             <br />
             <br />
-            In Frontend I have worked with everything from basic CSS & HTML to
-            JavaScript, React.js, Next.js, and React Native. On the Backend I have
-            experience with Express.js (Node) and MySQL, and combined it with
-            Frontend development for fullstack projects. The projects I showcase below are deployed through Vercel, while others use CI/CD for automatic deployment to Amazon AWS EC2/RDS instances with Docker.{" "}
+            In Frontend I have worked with everything from basic CSS/Tailwind & HTML to
+            JavaScript/TypeScript, React.js, Next.js, and React Native. In Backend I have
+            mainly worked with Express.js (Node) and MySQL, and created fullstack projects. The projects I showcase below are either deployed through Vercel or via CI/CD pipelines to Amazon AWS EC2/RDS instances with Docker.{" "}
            {/*  I live in Stockholm and I am currently enrolled at Chas Academy (university), studying{" "}
             <strong>Fullstack development with a focus on Frontend</strong>. In
             Frontend I have worked with everything from basic CSS & HTML to
