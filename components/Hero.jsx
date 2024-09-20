@@ -33,7 +33,7 @@ export default function Hero() {
       <div className=" flex flex-col gap-12 text-center sm:w-[70%]">
         <div ref={heroTitleRef} className="absolute"></div>
         <h1  className="text-black dark:text-white text-5xl lg:text-6xl font-extrabold mx-4 ">HI, I'M MARCUS EKSTRÖM</h1>
-        <p className="mx-4">Fullstack developer student based in Stockholm</p>
+        <p className="mx-4">Frontend developer based in Stockholm</p>
 
         <div className="flex justify-center mx-4 ">
           <BlueButton arrowDown={true} onClick={() => {

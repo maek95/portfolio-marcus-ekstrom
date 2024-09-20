@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="flex flex-col gap-4">
         <h4>Marcus Ekström</h4>
         <p>
-          An aspiring Fullstack developer student - specialising in Frontend, eager to pursue a career in Software Development.
+          An aspiring Frontend developer, eager to pursue a career in Software Development.
         </p>
         <p>© COPYRIGHT 2024</p>
       </div>

@@ -22,7 +22,7 @@ export default function AboutMe() {
             <br />
             In Frontend I have worked with everything from basic CSS/Tailwind & HTML to
             JavaScript/TypeScript, React.js, Next.js, and React Native. In Backend I have
-            mainly worked with Express.js (Node) and MySQL, and created fullstack projects. The projects I showcase below are either deployed through Vercel or via CI/CD pipelines to Amazon AWS EC2/RDS instances with Docker.{" "}
+            mainly worked with Node.js (Express.js), MySQL, and created fullstack projects. The projects I showcase below are either deployed through Vercel or via CI/CD pipelines to Amazon AWS EC2/RDS instances with Docker.{" "}
            {/*  I live in Stockholm and I am currently enrolled at Chas Academy (university), studying{" "}
             <strong>Fullstack development with a focus on Frontend</strong>. In
             Frontend I have worked with everything from basic CSS & HTML to
