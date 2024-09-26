@@ -14,10 +14,10 @@ export default function AboutMe() {
         <div className="">
           <p className="">
             I live in Stockholm and I am currently enrolled at Chas Academy (university), studying{" "}
-           <strong>Fullstack development - specialising in Frontend</strong>. 
+           <strong>Fullstack JavaScript - specialising in Frontend</strong>. I have created projects individually and collectively - utilising Scrum and Trello!
            <br />
            <br />
-            I began my coding journey after completing a <strong>Masters in Economics</strong> at Stockholm University in the summer of 2022. Following this, I took three individual university-courses in programming: C++, Java, and Android Studio (Kotlin), which all fascinated me and led me to pursue a Fullstack/Frontend program at Chas Academy in 2023!
+            I began my coding journey after completing a <strong>Masters in Economics</strong> at Stockholm University in the summer of 2022. Following this, I took three individual university-courses in programming: C++, Java, and Android Studio (Kotlin), which all fascinated me and brought me on to this path! My work experience is predominatly as a Car Rental Agent at Hertz and Europcar, where I worked closely with colleagues and met new customers every day.
             <br />
             <br />
             In Frontend I have worked with everything from basic CSS/Tailwind & HTML to
