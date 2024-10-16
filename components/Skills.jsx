@@ -82,6 +82,10 @@ export default function Skills() {
       <div className="flex flex-col gap-4">
         <h4 className="text-black dark:text-white ">Basic Knowledge</h4>
         <div className="flex flex-wrap gap-4">
+          <Skill skillName={"SEO"}></Skill>
+          <Skill skillName={"Google Analytics"}></Skill>
+          <Skill skillName={"Cypress"}></Skill>
+          <Skill skillName={"Jest"}></Skill>
           <Skill skillName={"Java"}></Skill>
           <Skill skillName={"Spring Boot"}></Skill>
           <Skill skillName={"C++"}></Skill>
