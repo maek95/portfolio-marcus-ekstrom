@@ -68,6 +68,28 @@ export default function Projects() {
       </Project>
 
       <Project
+        title={"TypeScript pizza website with grid-styling"}
+        //githubLink={""}
+        projectLink={"https://slajs-pizza-next.vercel.app"}
+        stacks={["TypeScript", "Tailwind", "Next.js"]}
+        imgSrc={"/pizza-typescript-mockup.png"}
+      >
+        My first TypeScript project using an API for a menu of food, ordering
+        food, and viewing orders.
+        <br />
+        <br />
+        The grid-styling was challenging but really fun, taking inspiration from{" "}
+        <Link
+          className="text-[#7c7c7c] dark:text-[#959eae]"
+          href={"https://tengu.se"}
+          target="_blank"
+        >
+          https://tengu.se
+        </Link>
+        .
+      </Project>
+
+      <Project
         title={"Memory Game App"}
         githubLink={
           "https://github.com/maek95/react-native-memory-game-Java-SpringBoot-animated-character"
@@ -151,8 +173,8 @@ export default function Projects() {
       </Project>
  */}
 
-      <Project
-        title={"Replicated and scaled down Zoom's website"}
+      {/*  <Project
+        title={"Zoom's main page"}
         projectLink={"https://workshop-12-tailwind-redesignzoom.vercel.app"}
         githubLink={
           "https://github.com/maek95/workshop_12_tailwind_redesignzoom"
@@ -176,7 +198,7 @@ export default function Projects() {
         This project was very fulfilling as Zoom's website displays a lot of
         information and is quite content-rich. I had to carefully analyze what
         to keep and what to remove, and also add my own design elements.
-      </Project>
+      </Project> */}
 
       <Project
         title={"Figma Design"}
@@ -191,8 +213,8 @@ export default function Projects() {
         design! It gave me some insight on how Designers may work with Figma, or
         if I want to brainstorm design ideas for a new project.
       </Project>
-      <Project
-        title={"Replicated Nordea's website"}
+      {/* <Project
+        title={"Replicated Nordea's form"}
         projectLink={"https://workshop-4-form.vercel.app"}
         githubLink={"https://github.com/maek95/workshop_4_form"}
         imgSrc={"/NordeaPagePreview.png"}
@@ -217,7 +239,7 @@ export default function Projects() {
         <strong>Note:</strong> To view the page (Project Link below){" "}
         <strong>you may have to refresh the page once when entering</strong>,
         due to the nature of being a raw HTML page.
-      </Project>
+      </Project> */}
     </div>
   );
 }
@@ -242,7 +264,8 @@ function Project({
     if (contentRef.current) {
       const contentHeight = contentRef.current.offsetHeight;
       // Check if content height exceeds 150px
-      if (contentHeight > 199 && contentHeight < 201) { // less than 201 so it isnt applied when we extend the div...
+      if (contentHeight > 199 && contentHeight < 201) {
+        // less than 201 so it isnt applied when we extend the div...
         setIsOverflowing(true);
       }
     }
@@ -315,12 +338,21 @@ function Project({
               </div>
             </div>
 
-            <div onClick={() => {
-                setShowFullDescription(!showFullDescription)
-              }} className={`flex w-full text-start relative ${isOverflowing && !showFullDescription && "fade-bottom"}`}
+            <div
+              onClick={() => {
+                setShowFullDescription(!showFullDescription);
+              }}
+              className={`flex w-full text-start relative ${
+                isOverflowing && !showFullDescription && "fade-bottom"
+              }`}
             >
               {/* <p className=""> {typeof children === 'string' ? children.slice(0, 50) : children}</p> */}
-              <div ref={contentRef} className={`${showFullDescription ? "" : "max-h-[200px] overflow-hidden"}`}>
+              <div
+                ref={contentRef}
+                className={`${
+                  showFullDescription ? "" : "max-h-[200px] overflow-hidden"
+                }`}
+              >
                 <p className="">{children}</p>
               </div>
               {isOverflowing && !showFullDescription && (
