@@ -8,10 +8,10 @@ function Skill({ skillName }) {
   return (
     <div className="relative">
       <div className="bg-[#EEEFF2] rounded-lg dark:bg-[#1A1C21] p-4 flex justify-center text-center"
-      style={{
-        transition: "transform 0.1s",
-        margin: "0",
-      }}
+        style={{
+          transition: "transform 0.1s",
+          margin: "0",
+        }}
       >
         {/* <div className="bg-[#EEEFF2] rounded-lg dark:bg-white p-4 flex justify-center text-center text-[#23272F]"> */}
         {skillName}
@@ -77,6 +77,7 @@ export default function Skills() {
         <Skill skillName={"GitHub"} />
         <Skill skillName={"Terminal"} />
         <Skill skillName={"MySQL"} />
+        <Skill skillName={"Sequelize"} />
         <Skill skillName={"Regression Analysis"} />
       </div>
       <div className="flex flex-col gap-4">

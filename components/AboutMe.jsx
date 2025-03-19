@@ -13,31 +13,13 @@ export default function AboutMe() {
         <h4 className="text-black dark:text-white ">Get to know me!</h4>
         <div className="">
           <p className="">
-            I live in Stockholm and I am currently enrolled at Chas Academy (university), studying{" "}
-           <strong>Fullstack JavaScript - specialising in Frontend</strong>. I have created projects individually and collectively - utilising Scrum and Trello!
-           <br />
-           <br />
-            I began my coding journey after completing a <strong>Masters in Economics</strong> at Stockholm University in the summer of 2022. Following this, I took three individual university-courses in programming: C++, Java, and Android Studio (Kotlin), which all fascinated me and brought me on to this path! My work experience is predominatly as a Car Rental Agent at Hertz and Europcar, where I worked closely with colleagues and met new customers every day.
+            I am a blend of liking video games, going to the gym, eating dinner with friends, the occasional night in the city, master{"'"}s in economics, and excited to keep building my career as a developer!
             <br />
             <br />
-            In Frontend I have worked with everything from basic CSS/Tailwind & HTML to
-            JavaScript/TypeScript, React.js, Next.js, and React Native. In Backend I have
-            mainly worked with Node.js (Express.js), MySQL, and created fullstack projects. The projects I showcase below are either deployed through Vercel or via CI/CD pipelines to Amazon AWS EC2/RDS instances with Docker.{" "}
-           {/*  I live in Stockholm and I am currently enrolled at Chas Academy (university), studying{" "}
-            <strong>Fullstack development with a focus on Frontend</strong>. In
-            Frontend I have worked with everything from basic CSS & HTML to
-            JavaScript, React.js, Next.js, and React Native. In backend I have
-            worked with Express.js (Node) and MySQL, and I have combined it with
-            frontend for fullstack projects. Regarding fullstack projects, I
-            have deployed them using Amazon AWS EC2 instances, PM2, and Docker.
+            Currently I am in the final stages of my <strong>6-month internship at the legal-tech firm Kliently as a fullstack developer</strong>. Choosing a career as a developer has truly felt like the perfect fit for me, and I'm excited to see how both this profession and I continue to evolve together.
             <br />
             <br />
-            Before my coding journey began I took a{" "}
-            <strong>Masters in Economics</strong> at Stockholm University, where
-            my Master Thesis involved analyzing large datasets using Vector
-            Autoregression (VAR) and MATLAB. Following my masters I also took
-            individual university-courses in C++, Java, and Kotlin, before
-            investing wholeheartedly into fullstack/frontend developing!{" "} */}
+            I began my coding journey after completing a <strong>Masters in Economics</strong> at Stockholm University in the summer of 2022. Following this, I took three individual university-courses in programming: C++, Java, and Android Studio {"("}Kotlin{")"}, which all fascinated me and brought me on to this path!
           </p>
         </div>
         {/*  <a href="#projects"> */}

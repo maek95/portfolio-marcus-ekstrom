@@ -5,9 +5,9 @@ export default function Footer() {
       <div className="flex flex-col gap-4">
         <h4>Marcus Ekström</h4>
         <p>
-          An aspiring Frontend developer, eager to pursue a career in Software Development.
+          A Fullstack developer, eager to see how this profession and I continue to evolve together!.
         </p>
-        <p>© COPYRIGHT 2024</p>
+        <p>© COPYRIGHT 2025</p>
       </div>
     </div>
   )

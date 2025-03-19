@@ -18,7 +18,7 @@ export default function Projects() {
     <div className="grid grid-cols-1 gap-5">
       <Project
         title={"Price winner LUDI - combining AI with a Movie Database"}
-        projectLink={"https://ludi-app.com"}
+        // projectLink={"https://ludi-app.com"}
         githubLink={"https://github.com/axelcfk/chas-challenge2"}
         imgSrc={"/ludi_mockups_together.png"}
         transparentImgBg={true} // have to move cursor further in to zoom
@@ -66,9 +66,8 @@ export default function Projects() {
         Most recent addition: I migrated the MySQL database to an AWS RDS
         instance instead of Docker, to hopefully provide more stability.
       </Project>
-
       <Project
-        title={"TypeScript pizza website with grid-styling"}
+        title={"Pizza website with grid-styling"}
         //githubLink={""}
         projectLink={"https://slajs-pizza-next.vercel.app"}
         stacks={["TypeScript", "Tailwind", "Next.js"]}
@@ -122,8 +121,8 @@ export default function Projects() {
       </Project>
 
       <Project
-        title={"Fullstack Bank Site"}
-        projectLink={"http://13.53.190.247:3000"}
+        title={"My first fullstack project"}
+        // projectLink={"http://13.53.190.247:3000"}
         githubLink={
           "https://github.com/maek95/workshop-26-docker-bank-mysql-test"
         }
@@ -244,8 +243,9 @@ export default function Projects() {
   );
 }
 
-function Project({
+export function Project({
   title,
+  subTitle,
   description,
   projectLink,
   githubLink,
@@ -277,7 +277,6 @@ function Project({
         <div className="min-w-full flex flex-col lg:flex-row items-center gap-8">
           <div className="flex w-full justify-center">
             {/* <a className="relative" href={projectLink}> */}
-
             {videoSrc && (
               <iframe // iframe "recommended" way to include YouTube content on your site... Using YouTube instead of local file, otherwise the bandwidth is too much for mobile browsers...
                 key={videoSrc} // force re-render if videoSrc changes live... i.e. when not rebuilding the project...?
@@ -303,20 +302,25 @@ function Project({
 
                 {/* invisible div that covers the img above... hover over it and it scales the img to 110% size. I did this instead of having the hover-feature directly on the image because now I can trigger the zoom when hovering further into a picture if I want (see inset-[18%]). */}
                 <div
-                  className={`z-1 absolute ${
-                    transparentImgBg ? "inset-[18%]" : "inset-[0]"
-                  } rounded-lg hover:scale-110 duration-500 transition-transform cursor-pointer`}
+                  className={`z-1 absolute ${transparentImgBg ? "inset-[18%]" : "inset-[0]"
+                    } rounded-lg hover:scale-110 duration-500 transition-transform cursor-pointer`}
                   style={{ pointerEvents: "auto" }}
                   onMouseOver={(e) =>
-                    (e.currentTarget.previousSibling.style.transform =
-                      "scale(1.1)")
+                  (e.currentTarget.previousSibling.style.transform =
+                    "scale(1.1)")
                   }
                   onMouseOut={(e) =>
-                    (e.currentTarget.previousSibling.style.transform =
-                      "scale(1)")
+                  (e.currentTarget.previousSibling.style.transform =
+                    "scale(1)")
                   }
                   onClick={() => {
-                    window.open(projectLink, "_blank");
+                    if (projectLink) {
+                      window.open(projectLink, "_blank");
+                    } else if (githubLink) {
+                      window.open(githubLink, "_blank")
+                    } else {
+                      console.log("no url is provided");
+                    }
                   }}
                 ></div>
               </div>
@@ -324,8 +328,9 @@ function Project({
           </div>
 
           <div className="w-full flex flex-col items-center lg:items-start  lg:text-start gap-4">
-            <div className="flex w-full text-start">
-              <h3 className="text-black dark:text-white ">{title}</h3>
+            <div className="flex w-full flex-col text-start gap-2">
+              {subTitle && <p className="text-gray dark:text-white">{subTitle}</p>}
+              <h3 className="text-black dark:text-white">{title}</h3>
             </div>
 
             <div className="flex w-full">
@@ -342,16 +347,14 @@ function Project({
               onClick={() => {
                 setShowFullDescription(!showFullDescription);
               }}
-              className={`flex w-full text-start relative ${
-                isOverflowing && !showFullDescription && "fade-bottom"
-              }`}
+              className={`flex w-full text-start relative ${isOverflowing && !showFullDescription && "fade-bottom"
+                }`}
             >
               {/* <p className=""> {typeof children === 'string' ? children.slice(0, 50) : children}</p> */}
               <div
                 ref={contentRef}
-                className={`${
-                  showFullDescription ? "" : "max-h-[200px] overflow-hidden"
-                }`}
+                className={`${showFullDescription ? "" : "max-h-[200px] overflow-hidden"
+                  }`}
               >
                 <p className="">{children}</p>
               </div>

@@ -5,20 +5,18 @@ import { SectionRefContext } from "@/SectionRefContext";
 
 export default function Hero() {
 
-  const { scrollToSection, projectsSectionRef, heroTitleRef, isHeroInView } = useContext(SectionRefContext); // setHeightDifference
+  const { scrollToSection, workExperienceSectionRef, projectsSectionRef, heroTitleRef, isHeroInView } = useContext(SectionRefContext); // setHeightDifference
 
-  console.log("isHeroInView", isHeroInView);
-
-/* 
-  useEffect(() => {
-    if (heroRef.current) {
-      const originalHeight = heroRef.current.offsetHeight;
-      heroRef.current.classList.add("h-dvh");
-      const newHeight = heroRef.current.offsetHeight;
-      heroRef.current.classList.remove("h-dvh");
-      setHeightDifference(newHeight - originalHeight);
-    }
-  }, [setHeightDifference]); */
+  /* 
+    useEffect(() => {
+      if (heroRef.current) {
+        const originalHeight = heroRef.current.offsetHeight;
+        heroRef.current.classList.add("h-dvh");
+        const newHeight = heroRef.current.offsetHeight;
+        heroRef.current.classList.remove("h-dvh");
+        setHeightDifference(newHeight - originalHeight);
+      }
+    }, [setHeightDifference]); */
 
   //bg-[#EEEFF2] dark:bg-[#1A1C21]
   return ( //(removed) mt-[-80px] due to Header being 80px... // h-dvh with for dynamic view when e.g mobile browser footer or header impacts the screen size. Makes stuff jump around though - maybe test transition-all duration-500 ease-in-out
@@ -32,13 +30,12 @@ export default function Hero() {
       {/* (removed) mt-[-5rem] because <Header> is h-20 and pushes Hero down 5rem */}
       <div className=" flex flex-col gap-12 text-center sm:w-[70%]">
         <div ref={heroTitleRef} className="absolute"></div>
-        <h1  className="text-black dark:text-white text-5xl lg:text-6xl font-extrabold mx-4 ">HI, I'M MARCUS EKSTRÖM</h1>
-        <p className="mx-4">Frontend developer based in Stockholm</p>
-
+        <h1 className="text-black dark:text-white text-5xl lg:text-6xl font-extrabold mx-4 ">HI, I'M MARCUS EKSTRÖM</h1>
+        <p className="mx-4">Fullstack developer based in Stockholm</p>
         <div className="flex justify-center mx-4 ">
           <BlueButton arrowDown={true} onClick={() => {
-            scrollToSection(projectsSectionRef)
-          }} title={"Projects"}></BlueButton>
+            scrollToSection(workExperienceSectionRef)
+          }} title={"Learn more"}></BlueButton>
           {/* <ProjectandContactButton onClick={scrollToAboutSection} title={"ABOUT ME"}></ProjectandContactButton> */}
         </div>
       </div>
