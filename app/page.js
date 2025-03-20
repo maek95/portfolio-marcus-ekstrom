@@ -68,9 +68,10 @@ export default function Home() {
         </Section>
         <div className="" ref={projectsSectionRef}></div>
         <Section
+          className={"pt-0"}
           title={"HOBBY/EDUCATION PROJECTS"}
-        /*  bgcolor={"[#EEEFF2]"}
-         darkbgcolor={"[#1A1C21]"} */
+          bgcolor={"[#EEEFF2]"}
+          darkbgcolor={"[#1A1C21]"}
         /*  graygradient={true} */
         /* whitegradient={true} */
         >
@@ -79,8 +80,8 @@ export default function Home() {
         <div className="" ref={contactSectionRef}></div>
         <Section
           title={"Contact Me"}
-          bgcolor={"[#EEEFF2]"}
-          darkbgcolor={"[#1A1C21]"}
+        /*  bgcolor={"[#EEEFF2]"}
+         darkbgcolor={"[#1A1C21]"} */
         >
           <Contact />
         </Section>
